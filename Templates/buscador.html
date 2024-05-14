@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuidando Peluditos</title>
+    <title>Buscador</title>
     <!-- Favicon -->
-    <link rel="icon" href="./Static/img/favicon.ico">
-    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="/Static/img/favicon.ico">
+    <link rel="stylesheet" href="/index.css">    
 </head>
+
 <body>
     <header>
         <!-- div contenedor para elementos del header -->
@@ -23,34 +24,24 @@
                     <div class="favoritos"> <a href="/Templates/registro.html">Favoritos</a></div>
                 </div>
             </div>
-
-            <div class="vista1">
-                <div class="foto_perro"> 
-                    <img src="https://github.com/BarbieriF/ProyectoCAC/blob/main/Static/img/puppy-2785074_1280.jpg" alt="Foto perro acostado">
-                </div>
-                <div class="texto_perro"> 
-                    Aca iria un texto que acompañe la imagen a modo presentacion
-                </div>
-            </div>
-            <!-- div para navbar -->
-        </div>
     </header>
-
     <main>
-        <div class="acerca_de">
-            <h1>Acerca de nosotros</h1>
-            <p>texto sobre nosotros</p>
+        <div class="buscadorPrincipal">
+            <h2 class="tituloSection">¿Buscamos un cuidador para tu mascota?</h2>
+            <form class="buscadorCuidador">
+                <input class="inputBuscador" type="text" placeholder="Buscar..." id="buscar" name="buscar">
+                <input class="botonBuscador" type="submit" value="Buscar">
+            </form>
         </div>
+        
     </main>
 
-        <footer class="footer">
-            <p>&copy; 2024 Cuidando Peluditos. Todos los derechos reservados.</p>
-            <p>
-                <a href="#about">Términos y Condiciones</a> |
-                <a href="#contact">Contacto</a>
-            </p>
-        </footer>
-
+    <footer class="footer">
+        <p>&copy; 2024 Cuidando Peluditos. Todos los derechos reservados.</p>
+        <p>
+            <a href="#about">Términos y Condiciones</a> |
+            <a href="#contact">Contacto</a>
+        </p>
     </footer>
 </body>
 </html>
