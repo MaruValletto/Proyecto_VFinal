@@ -6,7 +6,13 @@ F25116 Acento
 #D4B3FF FONDO BAANNER
 
  */
-
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+ *{
+   /* margin: 0;
+   padding: 0; */
+   box-sizing: border-box;
+   font-family: 'Poppins',sans-serif;
+ }
 
 .cont_logoybotones {
     background-color: #ffffff;
@@ -79,7 +85,7 @@ F25116 Acento
 .cachorro {
     display: flex;
     align-items: center;
-    background-color: #f2f2f2;
+    background-color: #9B63BF;
 }
 
 .foto_cachorro{
@@ -91,7 +97,7 @@ F25116 Acento
     flex: 1;
     margin: 2%;
     text-align: center;
-    color: #7D00B3;
+    color: #ffffff;
     font-size: larger;
 }
 
@@ -101,60 +107,53 @@ F25116 Acento
     font-size: 20px;
 }
 
-.main_foot {
-    border-color: black;
-    border-style:solid;
-    border-width: 0.5px;
-}
-
 .resto{
     display: flex;
-    transition: 1s;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .ventaja_dueño{
     flex:1;
     flex-wrap: wrap;
-    justify-content: space-between;
-    background: #fff;
     border-radius: 12px;
     padding: 30px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    text-align: justify;
+}
+
+.ventaja_dueño:hover{
+    transform: scale(1.1) translate(1%, 1%);
+    background-color: #d682e7;
 }
 
 .ventaja_mascota{
     flex:1;
     flex-wrap: wrap;
-    justify-content: space-between;
-    background: #fff;
     border-radius: 12px;
     padding: 30px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    text-align: justify;
+}
+.ventaja_mascota:hover{
+    transform: scale(1.1) translate(1%, 1%);
+    background-color: #d682e7;
 }
 
 .estamos_conectados{
     flex:1;
     flex-wrap: wrap;
-    justify-content: space-between;
-    background: #fff;
     border-radius: 12px;
     padding: 30px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
+    text-align: justify;
+}
+.estamos_conectados:hover{
+    transform: scale(1.1) translate(1%, 1%);
+    background-color: #d682e7;
+}
+
+.main_foot {
     align-items: center;
-    text-align: center;
 }
 
 .footer {
