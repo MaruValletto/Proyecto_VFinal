@@ -1,115 +1,121 @@
-/* 
-9B63BF Primario
-7D00B3 Secundario
-F25116 Acento
 
-#D4B3FF FONDO BAANNER
-
- */
  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
  *{
-   /* margin: 0;
-   padding: 0; */
    box-sizing: border-box;
    font-family: 'Poppins',sans-serif;
  }
 
+.todo {
+    background-image: url(Static/img/puppy-2785074_1280.jpg);
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+    background-position: center; /* Centra la imagen dentro del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
 .cont_logoybotones {
-    background-color: #ffffff;
     display: flex;
     height: 50px;
 }
 
 .logo {
     height: 80%;
-    flex: 0.8;
+    flex: 1;
 }
 
 .botones {
+    flex: 1;
     display: flex;
-    flex: 1.2;
     align-items: center;
 }
 
 .buscador {
     flex: 1;
-    border-color: #7D00B3;
-    border-style: solid;
-    border-width: 0.5px;
     border: 1%;
     margin: 2%;
     text-align: center;
 }
-
+.buscador:hover{
+    transform: scale(1.1) translate(1%, 1%);
+}
 .registro {
     flex: 1;
-    border-color: #7D00B3;
-    border-style: solid;
-    border-width: 0.5px;
     border: 1%;
     margin: 2%;
     text-align: center;
+}
+.registro:hover{
+    transform: scale(1.1) translate(1%, 1%);
 }
 .sesion {
     flex: 1;
-    border-color: #7D00B3;
-    border-style: solid;
-    border-width: 0.5px;
     border: 1%;
     margin: 2%;
     text-align: center;
+}
+.sesion:hover{
+    transform: scale(1.1) translate(1%, 1%);
 }
 .ayuda {
     flex: 1;
-    border-color: #7D00B3;
-    border-style: solid;
-    border-width: 0.5px;
     border: 1%;
     margin: 2%;
     text-align: center;
+}
+.ayuda:hover{
+    transform: scale(1.1) translate(1%, 1%);
 }
 .favoritos {
     flex: 1;
-    border-color: #7D00B3;
-    border-style: solid;
-    border-width: 0.5px;
     border: 1%;
     margin: 2%;
     text-align: center;
 }
+.favoritos:hover{
+    transform: scale(1.1) translate(1%, 1%);
+}
 
 .cont_ppal {
-    display: block;
 }
 
-.cachorro {
+.cachorro{
     display: flex;
-    align-items: center;
-    background-color: #9B63BF;
 }
 
-.foto_cachorro{
-    flex: 1;
+.cachorro{
+    /* background-image: url(Static/img/puppy-2785074_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  */
+    overflow: hidden;
+    height: 500px;
     width: 100%;
-    margin: 2%;
-}
-.texto_cachorro{
-    flex: 1;
-    margin: 2%;
-    text-align: center;
-    color: #ffffff;
+    align-items: center;
+    /* color: #7D00B3; */
+    color: #d682e7;
     font-size: larger;
+    justify-content: center;
+    text-align: center;
+}
+
+.nombre{
+    color: #F25116;
 }
 
 .acerca_de{
     text-align: center;
-    color: #494848;
-    font-size: 20px;
+    background-color: #d682e7ad;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    padding: 10px 20px 10px 20px;
 }
 
 .resto{
     display: flex;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    padding: 2%;
+    justify-content: space-evenly;
 }
 
 .ventaja_dueño{
@@ -117,13 +123,17 @@ F25116 Acento
     flex-wrap: wrap;
     border-radius: 12px;
     padding: 30px;
+    margin: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
     text-align: justify;
 }
 
 .ventaja_dueño:hover{
     transform: scale(1.1) translate(1%, 1%);
-    background-color: #d682e7;
+    background-color: #d682e7ad;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    text-align: justify;
+    transition: 1.5s;
 }
 
 .ventaja_mascota{
@@ -131,12 +141,14 @@ F25116 Acento
     flex-wrap: wrap;
     border-radius: 12px;
     padding: 30px;
+    margin: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
     text-align: justify;
 }
 .ventaja_mascota:hover{
     transform: scale(1.1) translate(1%, 1%);
-    background-color: #d682e7;
+    background-color: #d682e7ad;
+    transition: 1.5s;
 }
 
 .estamos_conectados{
@@ -144,16 +156,49 @@ F25116 Acento
     flex-wrap: wrap;
     border-radius: 12px;
     padding: 30px;
+    margin: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
     text-align: justify;
 }
 .estamos_conectados:hover{
     transform: scale(1.1) translate(1%, 1%);
-    background-color: #d682e7;
+    background-color: #d682e7ad;
+    transition: 1.5s;
 }
 
 .main_foot {
+    display: flex;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+.media-icons{
+    margin-top: 10px;
+    display: flex;
+}
+
+.media-icons a{
+    text-align: center;
+    line-height: 33px;
+    height: 35px;
+    width: 35px;
+    margin: 0 4px;
+    font-size: 18px;
+    color: #FFF;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: #9B63BF;
+    transition: all 0.3s ease;
+}
+
+.media-icons a:hover{
+    color: #f25116;
+    background-color: #fff;
+    border-color: #f25116;
 }
 
 .footer {
