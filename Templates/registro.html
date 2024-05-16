@@ -6,13 +6,47 @@
     <title>Registro</title>
     <!-- Favicon -->
     <link rel="icon" href="/Static/img/favicon.ico">
+    <link rel="stylesheet" href="/registro.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body>
-    <header></header>
 
+<body class="todo">
+  <!-- header con botones --> 
+    <header>
+      <div class="cont_logoybotones">
+        <div>
+            <img src="/Static/img/Texto Logo.png" alt="Texto logo" class="logo">
+        </div>
+        <div class="botones">
+            <div class="buscador"> <a href="/Templates/buscador.html">Encontra un Cuidador</a></div>                
+            <div class="registro"> <a href="/Templates/registro.html">Registro</a></div>
+            <div class="sesion"> <a href="/Templates/registro.html">Iniciar Sesión</a></div>
+            <div class="ayuda"> <a href="/Templates/registro.html">Ayuda</a></div>
+            <div class="favoritos"> <a href="/Templates/registro.html">Favoritos</a></div>
+        </div>
+    </div>
+    </header>
 
-    <main>
-
+    <!-- formulario --> 
+    <div class="wrapper">
+      <div class="form-box login">
+        <h2>Iniciar Sesión</h2>
+        <form action="#">
+          <div class="input-box">
+            <span class="icon"></span>
+            <input type="email" required>
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"></span>
+            <input type="Contraseña" required>
+            <label>Contraseña</label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--
+      <main>
         <form>
             <div class="container">
               <h1>Register</h1>
@@ -40,9 +74,27 @@
               <p>Already have an account? <a href="#">Sign in</a>.</p>
             </div>
           </form>
-    </main>
+    </main> -->
 
-
-    <footer></footer>
+<!-- | PARA CHEQUEAR | No se si va dentro del body o no el footer-->
+    <footer>
+      <div class="main_foot">
+            <div class="media-icons">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-whatsapp"></i></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
+
+<footer class="footer">
+    <p>&copy; 2024 Cuidando Peluditos. Todos los derechos reservados.</p>
+    <p>
+        <a href="#about">Términos y Condiciones</a> |
+        <a href="#contact">Contacto</a>
+    </p>
+</footer>
+    
 </html>

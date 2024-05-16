@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+/* imagen de fondo */
+.todo {
+   min-height: 100vh;
+   background-image: url(/Static/img/perro+pijama.jpg);
+   background-size: cover;
+   background-position: center; /* Centra la imagen dentro del contenedor */
+   background-repeat: no-repeat; /* Evita que la imagen se repita */
+   
+}
+
+/* header */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.cont_logoybotones {
+   display: flex;
+   height: 60px;
+   background-color: #060000;
+   border-radius: 10px;
+   opacity: 70%;
+}
+.logo {
+   height: 60%;
+   flex: 1;
+   margin: 15%;
+}
+.botones {
+   flex: 1;
+   display: flex;
+   align-items: center;
+}
+.buscador {
+   flex: 1;
+   border: 1%;
+   margin: 2%;
+   text-align: center;
+}
+.buscador:hover{
+   transform: scale(1.1) translate(1%, 1%);
+}
+.registro {
+   flex: 1;
+   border: 1%;
+   margin: 2%;
+   text-align: center;
+}
+.registro:hover{
+   transform: scale(1.1) translate(1%, 1%);
+}
+.sesion {
+   flex: 1;
+   border: 1%;
+   margin: 2%;
+   text-align: center;
+}
+.sesion:hover{
+   transform: scale(1.1) translate(1%, 1%);
+}
+.ayuda {
+   flex: 1;
+   border: 1%;
+   margin: 2%;
+   text-align: center;
+}
+.ayuda:hover{
+   transform: scale(1.1) translate(1%, 1%);
+}
+.favoritos {
+   flex: 1;
+   border: 1%;
+   margin: 2%;
+   text-align: center;
+}
+.favoritos:hover{
+   transform: scale(1.1) translate(1%, 1%);
+}
+
+/* formulario */
+
+
+
+
+/* footer */
+.main_foot {
+    display: flex;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.media-icons{
+    margin-top: 10px;
+    display: flex;
+}
+
+.media-icons a{
+    text-align: center;
+    line-height: 33px;
+    height: 35px;
+    width: 35px;
+    margin: 0 4px;
+    font-size: 18px;
+    color: #FFF;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: #9B63BF;
+    transition: all 0.3s ease;
+}
+
+.media-icons a:hover{
+    color: #f25116;
+    background-color: #fff;
+    border-color: #f25116;
+}
+
+.footer {
+    color: grey;
+    border: 2%;
+    text-align: center;
+}
