@@ -1,0 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+.cabecera {
+    background-color: #9B63BF;
+    text-align: center;
+    color: white;
+    padding: 3%;
+}
+
+.faq-contenedor{
+    padding: 3%;
+    background-color: #f2f2f2;
+}
+
+.faq-item{
+    padding: 2%;
+}
+
+.faq-pregunta{
+    padding: 0.8%;
+    font-size: larger;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.faq-pregunta:hover{
+    color: #f25116;
+    border-color: #f25116;
+    transform: scale(130%) translate(1%, 1%);
+    text-align: center;
+    transition: 1s;
+}
+.faq-rta{
+    padding: 0.8%;
+    flex-wrap: wrap;
+    color: rgb(64, 64, 65);
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(166, 109, 199, 0.25);
+    text-align: justify;
+}
+.faq-rta:hover{
+    transform: scale(105%) translate(1%, 1%);
+    text-align: justify;
+    transition: 1.5s;
+}
+
+.main_foot {
+    display: flex;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.media-icons{
+    margin-top: 10px;
+    display: flex;
+}
+
+.media-icons a{
+    text-align: center;
+    line-height: 33px;
+    height: 35px;
+    width: 35px;
+    margin: 0 4px;
+    font-size: 18px;
+    color: #FFF;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: #9B63BF;
+    transition: all 0.3s ease;
+}
+
+.media-icons a:hover{
+    color: #f25116;
+    background-color: #fff;
+    border-color: #f25116;
+}
+
+.footer{
+    color: grey;
+    border: 2%;
+    text-align: center;
+}
