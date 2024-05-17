@@ -47,6 +47,7 @@
     text-align: center;
     margin-left: 10px;
 }
+
 .buscador:hover{
     transform: scale(150%) translate(1%, 1%);
 }
