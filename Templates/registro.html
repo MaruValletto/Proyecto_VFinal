@@ -6,7 +6,7 @@
     <title>Registro</title>
     <!-- Favicon -->
     <link rel="icon" href="/Static/img/favicon.ico">
-    <link rel="stylesheet" href="/registro.css">
+    <link rel="stylesheet" href="/Static/css/registro.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body class="todo">
@@ -22,18 +22,19 @@
             <!-- pruebo modificar esto -->
             <div class="sesion"> <a href="#"></a>
             <button class="btnLogin-popup">Iniciar Sesión</button></div>
-            <div class="ayuda"> <a href="/Templates/registro.html">Ayuda</a></div>
+            <div class="ayuda"> <a href="/Templates/help.html">Ayuda</a></div>
             <div class="favoritos"> <a href="/Templates/registro.html">Favoritos</a></div>
         </div>
     </div>
     </header>
-
+    
+    <main>
     <!-- formulario --> 
     <br>
     <br>
     <div class="wrapper">
       <span class="icon-close"><ion-icon name="close"></ion-icon></span>
-
+      
       <div class="form-box login">
         <h2>Iniciar Sesión</h2>
         <form action="#">
@@ -45,12 +46,13 @@
 
           <div class="input-box">
             <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-            <input type="Contraseña" required>
+            <input type="password" required>
             <label>Contraseña</label>
           </div>
           
           <div class="remember-forgot">
-            <label><input type="checkbox"> Recuerdame </label>
+            <input type="checkbox">
+            <label> Recuerdame </label>
             <a href="#"> Olvidaste tu contraseña?</a>
           </div>
           <br>
@@ -65,27 +67,28 @@
       <!-- registro -->
     <div class="form-box register">
       <h2>Registro</h2>
-      <form action="#">
+      <form action="#" id="formulario">
     
         <div class="input-box">
           <span class="icon"><ion-icon name="person"></ion-icon></span>
-          <input type="text" required>
-          <label>Usuario</label>
+          <input type="text" name="usuario" id="usuario" required>
+          <label for="usuario">Usuario</label>
         </div>
     
         <div class="input-box">
           <span class="icon"><ion-icon name="mail"></ion-icon></span>
-          <input type="email" required>
-          <label>Email</label>
+          <input type="email" name="email" id="email" required>
+          <label for="email">Email</label>
         </div>
     
         <div class="input-box">
           <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-          <input type="Contraseña" required>
-          <label>Contraseña</label>
+          <input type="password" name="password" id="password" required>
+          <label for="password">Contraseña</label>
         </div>
         <div class="remember-forgot">
-          <label><input type="checkbox"> Acepto los términos y condiciones </label> 
+          <input type="checkbox">
+          <label> Acepto los términos y condiciones </label> 
         </div>
         <br>
         <button type="submit" class="btn"> Registrarse </button>
@@ -97,10 +100,13 @@
 
     </div>
     
-<!-- | PARA CHEQUEAR | No se si va dentro del body o no el footer-->
-<br>
-<br>    
-<footer>
+    
+    
+    </main>  
+
+    <!-- | PARA CHEQUEAR | No se si va dentro del body o no el footer-->
+    
+    <footer>
       <div class="main_foot">
             <div class="media-icons">
                 <a href="#"><i class="bi bi-facebook"></i></a>
@@ -109,19 +115,23 @@
                 <a href="#"><i class="bi bi-whatsapp"></i></i></a>
             </div>
         </div>
+
+        <div class="footer">
+          <p>&copy; 2024 Cuidando Peluditos. Todos los derechos reservados.</p>
+          <p>
+              <a href="#about">Términos y Condiciones</a> |
+              <a href="#contact">Contacto</a>
+          </p>
+        </div>
+      
     </footer>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="/script.js"></script>
+    <script src="/Static/Scripts/script.js"></script>
+    <script src="/Static/Scripts/fomulario.js"></script>
 </body>
 
-<footer class="footer">
-    <p>&copy; 2024 Cuidando Peluditos. Todos los derechos reservados.</p>
-    <p>
-        <a href="#about">Términos y Condiciones</a> |
-        <a href="#contact">Contacto</a>
-    </p>
-</footer>
+
     
 </html>
