@@ -6,10 +6,14 @@
 }
 
 .cabecera {
-    background-color: #9B63BF;
+    /* background-color: #9B63BF; */
+    background-image: url(/Static/img/puppy-2785074_1280.jpg);
     text-align: center;
     color: white;
     padding: 3%;
+    background-size: cover;
+    background-position: center; /* Centra la imagen dentro del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 .faq-contenedor{
