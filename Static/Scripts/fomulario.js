@@ -14,12 +14,25 @@ const expresiones = {
 const validarFormulario = (e)=>{
     switch(e.target.name){
         case "usuario":
+            if(expresiones.usuario.test(e.target.value)){
+
+            }else{
+                
+            }
+        break;
+        case "password":
+            console.log("funciona");
+        break;
+        case "password2":
+            console.log("funciona");
+        break;
+        case "email":
             console.log("funciona");
         break;
     }
 }
 
-// Llama a la funciones seleccionadas, ejecuta para cada input
+// Llama a la funciones seleccionadas, se ejecuta para cada input
 inputs.forEach(input => {
     input.addEventListener('keyup', validarFormulario)
     input.addEventListener('blur', validarFormulario)

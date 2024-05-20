@@ -7,12 +7,11 @@
 
 /* imagen de fondo */
 .todo {
-   min-height: 100vh;
+   min-height: 150vh;
    background-image: url(/Static/img/perro+pijama.jpg);
    background-size: cover;
    background-position: center; /* Centra la imagen dentro del contenedor */
-   background-repeat: no-repeat; /* Evita que la imagen se repita */
-   
+   background-repeat: no-repeat; /* Evita que la imagen se repita */   
 }
 
 /* header */
@@ -91,11 +90,14 @@
    transform: scale(1.1) translate(1%, 1%);
 }
 
+main{
+    min-height: 1000px;
+}
 /* formulario */
 .wrapper{
     position: relative;
     width: 400px;
-    height: 500px;
+    height: 700px;
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, .5);
     border-radius: 20px;
@@ -112,8 +114,10 @@
 .wrapper.active-popup{
     transform: scale(1);
 }
+
+/* se modifico el valor para que se pueda visualizar los campos adicionales */
 .wrapper.active {
-    height: 560px;
+    height: 700px;
 }
 
 .wrapper .form-box{
@@ -248,6 +252,39 @@ transform: translateX(400px);
 }
 .login-register p a:hover {
 text-decoration: underline;
+}
+
+/* estilos para mensaje de error */
+.formularioInput-error{
+    font-size: 12px;
+    margin-bottom: 0px;
+    display: none;
+}
+
+.formularioInput-error-activo{    
+    display: block;
+}
+
+/* estilos para icono de error */
+.formularioValidacion-estado{
+    position: absolute;
+    right: 40px;
+    /* verificar el valor de bottom para que el icono quede centrado */
+    bottom: 28px;
+    z-index: 100;
+    font-size: 1em;
+    opacity: 0;
+}
+
+/* estilos para mensaje de registro exitoso */
+.formularioMensaje-exito{
+    font-size: 1em;
+    color: #119200;
+    display: none;
+}
+
+.formularioMensaje-exito-activo{    
+    display: block;
 }
 
 /* footer */

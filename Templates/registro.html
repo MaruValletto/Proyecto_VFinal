@@ -65,38 +65,71 @@
       </div>
     
       <!-- registro -->
-    <div class="form-box register">
-      <h2>Registro</h2>
-      <form action="#" id="formulario">
+      <div class="form-box register">
+        <h2>Registro</h2>
+        <form action="#" id="formulario">
     
-        <div class="input-box">
-          <span class="icon"><ion-icon name="person"></ion-icon></span>
-          <input type="text" name="usuario" id="usuario" required>
-          <label for="usuario">Usuario</label>
-        </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="person"></ion-icon></span>
+            <label for="usuario">Usuario</label>
+            <div class="formularioGrup-input">
+              <!-- icono de cruz para solo se visualiza si hay dato incorrecto -->
+              <i class="formularioValidacion-estado fa-solid fa-circle-xmark"></i>
+              <!-- name e id son utilizados por JS para seleccionar el elemento -->
+              <input type="text" name="usuario" id="usuario" required>   
+            </div>            
+            <!-- mensaje de error en caso de que no pase la validacion, no será visible en caso contrario-->
+            <p class="formularioInput-error">El usuario debe tener de 4 a 16 digitos y solo puede contener letras, numeros y guion bajo.</p>                 
+          </div>
     
-        <div class="input-box">
-          <span class="icon"><ion-icon name="mail"></ion-icon></span>
-          <input type="email" name="email" id="email" required>
-          <label for="email">Email</label>
-        </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <div class="formularioGrup-input">
+              <input type="email" name="email" id="email" required>
+              <i class="formularioValidacion-estado fa-solid fa-circle-xmark"></i>
+            </div>          
+            <label for="email">Email</label>
+            <!-- mensaje de error en caso de que no pase la validacion, no será visible en caso contrario-->
+            <p class="formularioInput-error">Por favor ingrese un mail valido.</p>
+          </div>
     
-        <div class="input-box">
-          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-          <input type="password" name="password" id="password" required>
-          <label for="password">Contraseña</label>
-        </div>
-        <div class="remember-forgot">
-          <input type="checkbox">
-          <label> Acepto los términos y condiciones </label> 
-        </div>
-        <br>
-        <button type="submit" class="btn"> Registrarse </button>
-        <div class="login-register">
-          <p> Tiene cuenta? <a href="#" class="login-link"> Inicia Sesión</a></p>
-        </div>
-      </form>
-    </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <div class="formularioGrup-input">
+              <input type="password" name="password" id="password" required>
+              <i class="formularioValidacion-estado fa-solid fa-circle-xmark"></i>
+            </div>          
+            <label for="password">Contraseña</label>
+            <!-- mensaje de error en caso de que no pase la validacion, no será visible en caso contrario-->
+            <p class="formularioInput-error">la contraseña debe ser de 4 a 12 digitos.</p>
+          </div>
+
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <div class="formularioGrup-input">
+              <input type="password" name="password2" id="password2" required>
+              <i class="formularioValidacion-estado fa-solid fa-circle-xmark"></i>
+            </div>          
+            <label for="password">Repetir Contraseña</label>
+            <!-- mensaje de error en caso de que no pase la validacion, no será visible en caso contrario-->
+            <p class="formularioInput-error">Ambas contraseñas deben ser iguales.</p>
+          </div>
+
+          <div class="remember-forgot" id="grupoTerminos">
+            <input type="checkbox" name="terminos" id="terminos">
+            <label> Acepto los términos y condiciones </label> 
+          </div>
+          <br>
+          <div>
+            <button type="submit" class="btn"> Registrarse </button>
+            <!-- mensaje confirmando que paso todas las validaciones-->
+            <p class="formularioMensaje-exito" id="formularioMensaje-exito">Se registro exitosamente</p>
+          </div>          
+          <div class="login-register">
+            <p> Tiene cuenta? <a href="#" class="login-link"> Inicia Sesión </a></p>
+          </div>
+        </form>
+      </div>
 
     </div>
     
@@ -104,8 +137,7 @@
     
     </main>  
 
-    <!-- | PARA CHEQUEAR | No se si va dentro del body o no el footer-->
-    
+        
     <footer>
       <div class="main_foot">
             <div class="media-icons">
@@ -128,6 +160,7 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/75d256d284.js" crossorigin="anonymous"></script>
     <script src="/Static/Scripts/script.js"></script>
     <script src="/Static/Scripts/fomulario.js"></script>
 </body>
