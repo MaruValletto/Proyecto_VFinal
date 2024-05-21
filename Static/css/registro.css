@@ -11,11 +11,10 @@
    background-image: url(/Static/img/perro+pijama.jpg);
    background-size: cover;
    background-position: center; /* Centra la imagen dentro del contenedor */
-   background-repeat: no-repeat; /* Evita que la imagen se repita */   
+   background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 /* header */
-
 .header{
     position: fixed;
     top: 0;
@@ -100,6 +99,7 @@ main{
     height: 700px;
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, .5);
+    /* left: 10vh; para ponerlo un poco mas a la derecha*/
     border-radius: 20px;
     backdrop-filter:blur(20px);
     box-shadow:0 0 30px rgba (0, 0, 0, .5);
@@ -185,7 +185,7 @@ transform: translateX(400px);
 }
 .input-box input:focus~label,
 .input-box input:valid~label {
-    top: -5px;
+    top: -10px;
 }
 
 .input-box input{
@@ -204,18 +204,18 @@ transform: translateX(400px);
     right: 8px;
     font-size: 1.2em;
     color: #9B63BF;
-    line-height: 57px;    
+    line-height: 57px;
 }
 
 .remember-forgot{
     font-size: .9em;
     color: #665f6a;
     font-weight: 600;
-    margin: -15px 0 15 px;
+    margin: -15px 0 15px;
     display: flex;
     justify-content: space-between;
 }
-.remember-forgot label input{
+.remember-forgot input[type="checkbox"]{
     accent-color: #f25116;
     margin-right: 3px;
 }
@@ -254,6 +254,7 @@ transform: translateX(400px);
 text-decoration: underline;
 }
 
+
 /* estilos para mensaje de error */
 .formularioInput-error{
     font-size: 12px;
@@ -261,7 +262,7 @@ text-decoration: underline;
     display: none;
 }
 
-.formularioInput-error-activo{    
+.formularioInput-error-activo{
     display: block;
 }
 
@@ -274,6 +275,7 @@ text-decoration: underline;
     z-index: 100;
     font-size: 1em;
     opacity: 0;
+    
 }
 
 /* estilos para mensaje de registro exitoso */
@@ -283,7 +285,7 @@ text-decoration: underline;
     display: none;
 }
 
-.formularioMensaje-exito-activo{    
+.formularioMensaje-exito-activo{
     display: block;
 }
 
