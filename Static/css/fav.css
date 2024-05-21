@@ -42,7 +42,7 @@
 }
 
 .buscador,
-.registro,
+/* .registro, */
 .sesion,
 .ayuda,
 .favoritos {
@@ -57,10 +57,10 @@
   transform: scale(110%) translate(1%, 1%);
   text-decoration:underline #a954cd 2px;
 }
-.registro:hover{
+/* .registro:hover{
   transform: scale(110%) translate(1%, 1%);
   text-decoration:underline #a954cd 2px;
-}
+} */
 .sesion:hover{
   transform: scale(110%) translate(1%, 1%);
   text-decoration:underline #a954cd 2px;

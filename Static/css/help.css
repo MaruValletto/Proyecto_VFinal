@@ -189,8 +189,18 @@
     border-color: #f25116;
 }
 
-.footer{
-    color: grey;
-    border: 2%;
-    text-align: center;
+.footer {
+  color: grey;
+  border: 2%;
+  text-align: center;
+}
+
+.footer a {
+  text-decoration: none;
+  color: grey;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: #f25116;
 }
