@@ -286,8 +286,7 @@ button{
     .favoritos {
         margin: 5px 0;
     }
-} */
-
+}  */
 /* Estilos para la sección principal */
 /* .cont_ppal {
     padding: 20px;
@@ -315,7 +314,7 @@ button{
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     margin-bottom: 20px;
-} */
+}  */
 
 /* Estilos para el footer */
 /* footer {
