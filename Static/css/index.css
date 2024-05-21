@@ -19,22 +19,53 @@
     background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
-.cont_logoybotones {
+/* header  */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 99;
+}
+
+.cont_logoybotones {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff8a;
+    border-radius: 10px;
+    padding: 10px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+/* Para que no subraye los hipervinculos*/
+.cont_logoybotones a {
+  text-decoration: none;
+  color: #a954cd; /*Color de los botones header*/
 }
 
 .logo {
-    max-width: 100%;
-    height: 80px;
-    flex: 1;
+  max-width: 100%;
+  height: 50px;
+  flex: 1;
+
 }
 
 .botones {
-    flex: 1;
-    display: flex;
-    align-items: center;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  font-weight: 500;
 }
 
 .buscador,
@@ -42,30 +73,50 @@
 .sesion,
 .ayuda,
 .favoritos {
-    flex: 1;
-    border: 1%;
-    margin: 2%;
-    text-align: center;
-    margin-left: 10px;
-}
+  flex: 1;
+  border: 1%;
+  margin: 2%;
+  text-align: center;
+  margin-left: 10px;
 
+}
 .buscador:hover{
-    transform: scale(150%) translate(1%, 1%);
+  transform: scale(110%) translate(1%, 1%);
+  text-decoration:underline #a954cd 2px;
 }
 .registro:hover{
-    transform: scale(150%) translate(1%, 1%);
+  transform: scale(110%) translate(1%, 1%);
+  text-decoration:underline #a954cd 2px;
 }
 .sesion:hover{
-    transform: scale(150%) translate(1%, 1%);
+  transform: scale(110%) translate(1%, 1%);
+  text-decoration:underline #a954cd 2px;
 }
 .ayuda:hover{
-    transform: scale(150%) translate(1%, 1%);
+  transform: scale(110%) translate(1%, 1%);
+  text-decoration:underline #a954cd 2px;
 }
 .favoritos:hover{
-    transform: scale(150%) translate(1%, 1%);
+  transform: scale(110%) translate(1%, 1%);
+  text-decoration:underline #a954cd 2px;
 }
 
+/*Animación del Logo*/
+.logo:hover{
+  animation: tilt-n-move-shaking 0.5s infinite;
+}
+@keyframes tilt-n-move-shaking {
+  0% {transform: translate(0,0) rotate(0deg);}
+  25% {transform: translate(5px, 5px) rotate(5deg);}
+  50% {transform: translate(0,0) rotate(0deg);}
+  75% {transform: translate(-5px,5px) rotate(-5deg);}
+  100% {transform: translate(0,0) rotate(0deg);}
+}
+
+/* Texto principal */
+
 .cachorro{
+    margin-top: 8%;
     overflow: hidden;
     height: 500px;
     width: 100%;
@@ -77,13 +128,14 @@
 }
 
 .nombre{
+    /* margin-top: 8%; */
     color: #F25116;
 }
 
 .acerca_de{
     text-align: center;
     color: rgb(64, 64, 65);
-    background-color: #efd5ffab;
+    background-color: #ffffff8a;
     border-radius: 12px;
     padding: 30px;
     margin: 20px;
@@ -98,6 +150,8 @@
     justify-content: space-evenly;
 }
 
+/* tarjetas animadas */
+
 .ventaja_dueño,
 .ventaja_mascota,
 .estamos_conectados
@@ -110,7 +164,7 @@
     margin: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
     text-align: justify;
-    background-color: #efd5ffab;
+    background-color: #ffffff8a;
 }
 
 .ventaja_dueño:hover{

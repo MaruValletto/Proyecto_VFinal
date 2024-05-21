@@ -5,20 +5,122 @@
   font-family: 'Poppins',sans-serif;
 }
 
+/* header  */
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+
+.cont_logoybotones {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffffd0;
+    border-radius: 10px;
+    padding: 10px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+/* Para que no subraye los hipervinculos*/
+.cont_logoybotones a {
+  text-decoration: none;
+  color: #a954cd; /*Color de los botones header*/
+}
+
+.logo {
+  max-width: 100%;
+  height: 50px;
+  flex: 1;
+
+}
+
+.botones {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.buscador,
+.registro,
+.sesion,
+.ayuda,
+.favoritos {
+  flex: 1;
+  border: 1%;
+  margin: 2%;
+  text-align: center;
+  margin-left: 10px;
+
+}
+.buscador:hover{
+  transform: scale(110%) translate(1%, 1%);
+  text-decoration:underline #a954cd 2px;
+}
+.registro:hover{
+  transform: scale(110%) translate(1%, 1%);
+  text-decoration:underline #a954cd 2px;
+}
+.sesion:hover{
+  transform: scale(110%) translate(1%, 1%);
+  text-decoration:underline #a954cd 2px;
+}
+.ayuda:hover{
+  transform: scale(110%) translate(1%, 1%);
+  text-decoration:underline #a954cd 2px;
+}
+.favoritos:hover{
+  transform: scale(110%) translate(1%, 1%);
+  text-decoration:underline #a954cd 2px;
+}
+
+/*Animación del Logo*/
+.logo:hover{
+  animation: tilt-n-move-shaking 0.5s infinite;
+}
+@keyframes tilt-n-move-shaking {
+  0% {transform: translate(0,0) rotate(0deg);}
+  25% {transform: translate(5px, 5px) rotate(5deg);}
+  50% {transform: translate(0,0) rotate(0deg);}
+  75% {transform: translate(-5px,5px) rotate(-5deg);}
+  100% {transform: translate(0,0) rotate(0deg);}
+}
+
+
 .cabecera {
-    /* background-color: #9B63BF; */
     background-image: url(/Static/img/puppy-2785074_1280.jpg);
     text-align: center;
     color: white;
-    padding: 3%;
+    padding-top: 15%;
     background-size: cover;
     background-position: center; /* Centra la imagen dentro del contenedor */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
+.h1 {
+  padding: 2%;
+}
+
+/* .h2 {
+  padding: 2%;
+} */
+
 .faq-contenedor{
-    padding: 3%;
-    background-color: #f2f2f2;
+  margin: 2%;
+    background-color: white;
 }
 
 .faq-item{
@@ -68,7 +170,7 @@
 }
 
 .media-icons a{
-    text-align: center;
+  text-align: center;
     line-height: 33px;
     height: 35px;
     width: 35px;
