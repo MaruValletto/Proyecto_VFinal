@@ -330,7 +330,7 @@ background-color:#9B63BF;
 }
 
 .footer {
-    color: grey;
+    color: rgb(66, 66, 66);
     border: 2%;
     text-align: center;
     font-weight: 500;
@@ -338,7 +338,7 @@ background-color:#9B63BF;
   
 .footer a {
     text-decoration: none;
-    color: grey;
+    color: rgb(66, 66, 66);
 }
   
   .footer a:hover {
