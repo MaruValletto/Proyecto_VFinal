@@ -1,0 +1,127 @@
+/* Agrego Familia de letras */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+    min-height: 150vh;
+    background-image: url(/Static/img/lovelydog+sillon.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    opacity: 80%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-content: center;
+}
+
+h1 {
+    text-align: center;
+    color: #4a444e;
+    font-size: 1.8em;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #4a444e;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #4a444e;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    width: auto;
+    accent-color: #f25116;
+    margin: 0; /* Eliminar cualquier margen del input */
+    vertical-align: middle; /* Alinear el botón de radio verticalmente con el texto */
+}
+
+.radio-group {
+    margin-bottom: 20px;
+    text-align: left; /* Alinea a la izquierda el contenido del grupo */
+}
+
+.group-label {
+    display: block;
+    margin-bottom: 10px; /* Espacio entre el título y las opciones */
+}
+
+.radio-options {
+    display: inline-flex; /* Mostrar los elementos en línea */
+}
+
+.radio-item {
+    display: flex;
+    align-items: baseline;
+    margin-right: 20px; /* Espacio entre los ítems */
+}
+
+.radio-item label {
+    margin-left: 5px; /* Espacio entre el botón de radio y el texto */
+    vertical-align: middle; /* Alinear verticalmente con el input */
+    line-height: 1.5; /* Ajustar según sea necesario */
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+.error {
+    color: red;
+    margin-bottom: 20px;
+}
+
+.input-error {
+    border-color: red;
+    background-color: #ffe6e6;
+}
+
+.icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: red;
+    display: none;
+}
+
+.show-icon {
+    display: inline;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #9B63BF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #f25116;
+}
