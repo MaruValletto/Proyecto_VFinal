@@ -70,30 +70,29 @@
 .ayuda,
 .favoritos {
   flex: 1;
-  border: 1%;
   margin: 2%;
   text-align: center;
   margin-left: 10px;
 
 }
 .buscador:hover{
-  transform: scale(110%) translate(1%, 1%);
+  transform: scale(1.1) translate(1%, 1%);
   text-decoration:underline #a954cd 2px;
 }
 .registro:hover{
-  transform: scale(110%) translate(1%, 1%);
+  transform: scale(1.1) translate(1%, 1%);
   text-decoration:underline #a954cd 2px;
 }
 .sesion:hover{
-  transform: scale(110%) translate(1%, 1%);
+  transform: scale(1.1) translate(1%, 1%);
   text-decoration:underline #a954cd 2px;
 }
 .ayuda:hover{
-  transform: scale(110%) translate(1%, 1%);
+  transform: scale(1.1) translate(1%, 1%);
   text-decoration:underline #a954cd 2px;
 }
 .favoritos:hover{
-  transform: scale(110%) translate(1%, 1%);
+  transform: scale(1.1) translate(1%, 1%);
   text-decoration:underline #a954cd 2px;
 }
 
@@ -121,7 +120,7 @@
     border: 2px solid rgba(255, 255, 255, .5);
     border-radius: 20px;
     backdrop-filter:blur(20px);
-    box-shadow:0 0 30px rgba (0, 0, 0, .5);
+    box-shadow:0 0 30px rgba(0, 0, 0, .5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -228,7 +227,7 @@ transform: translateX(400px);
     font-size: .9em;
     color: #665f6a;
     font-weight: 600;
-    margin: -15px 0 15 px;
+    margin: -15px 0 15px;
     display: flex;
     justify-content: space-between;
 }
@@ -285,13 +284,15 @@ background-color:#9B63BF;
     border: 2px solid #9B63BF;
     text-align: center;
     /* Agregar efecto de botón presionado */
-        transition: transform 0.5s, box-shadow 0.3s;
-        &:hover {
-            background-color: #f25116;
-            transform: scale(0.95);
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-        }
+    transition: transform 0.5s, box-shadow 0.3s;
 }
+
+.btnLogin-popup:hover {
+    background-color: #f25116;
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
 /* footer */
 .main_foot {
     display: flex;
@@ -331,7 +332,6 @@ background-color:#9B63BF;
 
 .footer {
     color: grey;
-    border: 2%;
     text-align: center;
     font-weight: 500;
 }
