@@ -46,30 +46,26 @@
 .ayuda,
 .favoritos {
   flex: 1;
-  border: 1%;
   margin: 2%;
   text-align: center;
   margin-left: 10px;
 
 }
 .buscador:hover{
-  transform: scale(110%) translate(1%, 1%);
+  transform: scale(1.1) translate(1%, 1%);
   text-decoration:underline #a954cd 2px;
 }
-/* .registro:hover{
-  transform: scale(110%) translate(1%, 1%);
-  text-decoration:underline #a954cd 2px;
-} */
+
 .sesion:hover{
-  transform: scale(110%) translate(1%, 1%);
+  transform: scale(1.1) translate(1%, 1%);
   text-decoration:underline #a954cd 2px;
 }
 .ayuda:hover{
-  transform: scale(110%) translate(1%, 1%);
+  transform: scale(1.1) translate(1%, 1%);
   text-decoration:underline #a954cd 2px;
 }
 .favoritos:hover{
-  transform: scale(110%) translate(1%, 1%);
+  transform: scale(1.1) translate(1%, 1%);
   text-decoration:underline #a954cd 2px;
 }
 
@@ -106,18 +102,20 @@
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
-        .inputBuscador{
-            border: 2px solid #9B63BF;
-            border-radius: 25px;
-            color: #000000;
-            font-size: 1.2rem;
-            height: 50px;
-            margin: 20px 0px;
-            outline: none;
-            padding: 0px 20px;
-            width: 500px;
-        }
 }
+
+.inputBuscador{
+    border: 2px solid #9B63BF;
+    border-radius: 25px;
+    color: #000000;
+    font-size: 1.2rem;
+    height: 50px;
+    margin: 20px 0px;
+    outline: none;
+    padding: 0px 20px;
+    width: 500px;
+}
+
 .botonBuscador{
     background-color:#9B63BF;
     display: inline-block;
@@ -131,13 +129,14 @@
     border: 2px solid #9B63BF;
     text-align: center;
     /* Agregar efecto de botón presionado */
-        transition: transform 0.3s, box-shadow 0.3s;
-        &:hover {
-            background-color: #f25116;
-            transform: scale(0.95);
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-        }
-}
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .botonBuscador:hover{
+    background-color: #f25116;
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+
 
 /* mapa */
 .mapa {
@@ -145,8 +144,8 @@
     justify-content: center;
     align-items: center;
     height: 30vh;
-
 }
+
 .mapa iframe{
     height:60vh;
     width: 92%;
@@ -288,8 +287,6 @@
           } */
   }
 
-
-
 /* footer */
 .main_foot {
   position: absolute;
@@ -330,7 +327,6 @@
 
 .footer {
   color: grey;
-  border: 2%;
   text-align: center;
   font-weight: 500;
   padding: 30px 0 0 0;

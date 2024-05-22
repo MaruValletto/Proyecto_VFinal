@@ -47,30 +47,25 @@
 .ayuda,
 .favoritos {
   flex: 1;
-  border: 1%;
   margin: 2%;
   text-align: center;
   margin-left: 10px;
   
 }
 .buscador:hover{
-  transform: scale(110%) translate(1%, 1%);
+  transform: scale(1.1) translate(1%, 1%);
   text-decoration:underline #a954cd 2px;
 }
-/* .registro:hover{
-  transform: scale(110%) translate(1%, 1%);
-  text-decoration:underline #a954cd 2px;
-} */
 .sesion:hover{
-  transform: scale(110%) translate(1%, 1%);
+  transform: scale(1.1) translate(1%, 1%);
   text-decoration:underline #a954cd 2px;
 }
 .ayuda:hover{
-  transform: scale(110%) translate(1%, 1%);
+  transform: scale(1.1) translate(1%, 1%);
   text-decoration:underline #a954cd 2px;
 }
 .favoritos:hover{
-  transform: scale(110%) translate(1%, 1%);
+  transform: scale(1.1) translate(1%, 1%);
   text-decoration:underline #a954cd 2px;
 }  
 
@@ -264,12 +259,13 @@ input[type="radio"]{
       border: 2px solid #9B63BF;
       text-align: center;
       /* Agregar efecto de botón presionado */
-          transition: transform 0.3s, box-shadow 0.3s;
-          &:hover {
-              transform: scale(1.1);
-              box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-          }
-  }
+      transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
 
 /* footer */
 .main_foot {
@@ -311,7 +307,6 @@ input[type="radio"]{
 
 .footer {
   color: grey;
-  border: 2%;
   text-align: center;
   padding: 30px 0 0 0;
 }

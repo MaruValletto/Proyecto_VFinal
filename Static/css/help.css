@@ -60,30 +60,29 @@
 .ayuda,
 .favoritos {
   flex: 1;
-  border: 1%;
   margin: 2%;
   text-align: center;
   margin-left: 10px;
 
 }
 .buscador:hover{
-  transform: scale(110%) translate(1%, 1%);
+  transform: scale(1.1) translate(1%, 1%);
   text-decoration:underline #a954cd 2px;
 }
 .registro:hover{
-  transform: scale(110%) translate(1%, 1%);
+  transform: scale(1.1) translate(1%, 1%);
   text-decoration:underline #a954cd 2px;
 }
 .sesion:hover{
-  transform: scale(110%) translate(1%, 1%);
+  transform: scale(1.1) translate(1%, 1%);
   text-decoration:underline #a954cd 2px;
 }
 .ayuda:hover{
-  transform: scale(110%) translate(1%, 1%);
+  transform: scale(1.1) translate(1%, 1%);
   text-decoration:underline #a954cd 2px;
 }
 .favoritos:hover{
-  transform: scale(110%) translate(1%, 1%);
+  transform: scale(1.1) translate(1%, 1%);
   text-decoration:underline #a954cd 2px;
 }
 
@@ -137,7 +136,7 @@
 .faq-pregunta:hover{
     color: #f25116;
     border-color: #f25116;
-    transform: scale(130%) translate(1%, 1%);
+    transform: scale(1.3) translate(1%, 1%);
     text-align: center;
     transition: 1s;
 }
@@ -150,7 +149,7 @@
     text-align: justify;
 }
 .faq-rta:hover{
-    transform: scale(105%) translate(1%, 1%);
+    transform: scale(1.05) translate(1%, 1%);
     text-align: justify;
     transition: 1.5s;
 }
@@ -213,7 +212,6 @@
 
 .footer {
   color: grey;
-  border: 2%;
   text-align: center;
 }
 
