@@ -285,7 +285,7 @@ background-color:#9B63BF;
     border: 2px solid #9B63BF;
     text-align: center;
     /* Agregar efecto de botón presionado */
-        transition: transform 0.3s, box-shadow 0.3s;
+        transition: transform 0.5s, box-shadow 0.3s;
         &:hover {
             background-color: #f25116;
             transform: scale(0.95);

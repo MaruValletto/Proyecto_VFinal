@@ -155,6 +155,28 @@
     transition: 1.5s;
 }
 
+/*Boton de Help*/
+.btn{
+  background-color:#9B63BF;
+      display: inline-block;
+      color:#ffffff;
+      height: 40px;
+      margin: .5%; 
+      padding:0 35px;
+      border-radius: 25px;
+      font-size: 0.9em;
+      font-weight: 600;
+      border: 2px solid #9B63BF;
+      text-align: center;
+      /* Agregar efecto de botón presionado */
+          /* transition: transform 0.5s, box-shadow 0.3s;
+          &:hover {
+              background-color: #f25116;
+              transform: scale(0.95);
+              box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+          } */
+  }
+
 .main_foot {
     display: flex;
     width: 100%;
