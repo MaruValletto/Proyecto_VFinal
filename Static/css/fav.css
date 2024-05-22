@@ -42,7 +42,7 @@
 }
 
 .buscador,
-.registro,
+/* .registro, */
 .sesion,
 .ayuda,
 .favoritos {
@@ -55,23 +55,23 @@
 }
 .buscador:hover{
   transform: scale(110%) translate(1%, 1%);
-  text-decoration:underline #f25116 2px;
+  text-decoration:underline #a954cd 2px;
 }
-.registro:hover{
+/* .registro:hover{
   transform: scale(110%) translate(1%, 1%);
-  text-decoration:underline #f25116 2px;
-}
+  text-decoration:underline #a954cd 2px;
+} */
 .sesion:hover{
   transform: scale(110%) translate(1%, 1%);
-  text-decoration:underline #f25116 2px;
+  text-decoration:underline #a954cd 2px;
 }
 .ayuda:hover{
   transform: scale(110%) translate(1%, 1%);
-  text-decoration:underline #f25116 2px;
+  text-decoration:underline #a954cd 2px;
 }
 .favoritos:hover{
   transform: scale(110%) translate(1%, 1%);
-  text-decoration:underline #f25116 2px;
+  text-decoration:underline #a954cd 2px;
 }  
 
 /*Animación del Logo*/
@@ -296,5 +296,10 @@ input[type="radio"]{
 
 .footer a {
   text-decoration: none;
+  color: grey;
 }
 
+.footer a:hover {
+  text-decoration: underline;
+  color: #f25116;
+}

@@ -8,14 +8,11 @@
     <link rel="stylesheet" href="/Static/css/formulario.css">
     <!-- Favicon -->
     <link rel="icon" href="/Static/img/favicon.ico">
-    <script>
-        
-    </script>
 </head>
 <body>
     <div class="container">
         <h1>Formulario de Contacto</h1>
-        <form action="submit_form.php" method="post" enctype="multipart/form-data">
+        <form id="formulario">
             <div id="error-message" class="error"></div>
 
             <label for="name">Nombre</label>
@@ -44,11 +41,20 @@
                 <label for="pet-sitting">Cuidado de Mascotas</label>
             </div>
 
+            <label for="subscription">Tipo de Suscripción</label>
+            <div class="input-container">
+                <select id="subscription" name="subscription">
+                    <option value="">Seleccionar suscripción</option>
+                    <option value="free">Gratis</option>
+                    <option value="standard">Estándar</option>
+                    <option value="premium">Premium</option>
+                </select>
+                <i class="fas fa-exclamation-circle icon"></i>
+            </div>
+
             <button type="submit">Enviar</button>
         </form>
     </div>
-    <script src="/Static/Scripts/formularioContaco.js"></script>
+    <script src="/Static/Scripts/formulario.js"></script>
 </body>
-    
-
 </html>

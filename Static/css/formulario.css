@@ -1,23 +1,20 @@
-/*Agrego Familia de letras*/
+/* Agrego Familia de letras */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-    /* margin: 0;
-    padding: 0;
-    box-sizing: border-box; */
-    font-family: 'Poppins',sans-serif;
-  }
+* {
+    font-family: 'Poppins', sans-serif;
+}
 
 body {
-    /* font-family: Arial, sans-serif; */
-    background-color: #f0f8ff; 
+    background-color: #f0f8ff;
     margin: 0;
     padding: 20px;
     min-height: 150vh;
-    background-image: url(/Static/img/lovelydog+sillon.jpg); /*Agrego imagen de fondo*/
+    background-image: url(/Static/img/lovelydog+sillon.jpg);
     background-size: cover;
-    background-position: center; /* Centra la imagen dentro del contenedor */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 .container {
     max-width: 600px;
     margin: 0 auto;
@@ -31,19 +28,22 @@ body {
 
 h1 {
     text-align: center;
-    color: #4a444e;/*Poner el color Lilita*/
+    color: #4a444e;
     font-size: 1.8em;
 }
+
 label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
     color: #4a444e;
 }
+
 .input-container {
     position: relative;
     margin-bottom: 20px;
 }
+
 input, textarea, select {
     width: 100%;
     padding: 10px;
@@ -51,22 +51,26 @@ input, textarea, select {
     border-radius: 4px;
     box-sizing: border-box;
 }
+
 input[type="radio"] {
     width: auto;
     accent-color: #f25116;
-
 }
+
 .radio-group {
     margin-bottom: 20px;
 }
+
 .error {
     color: red;
     margin-bottom: 20px;
 }
+
 .input-error {
     border-color: red;
     background-color: #ffe6e6;
 }
+
 .icon {
     position: absolute;
     right: 10px;
@@ -75,9 +79,11 @@ input[type="radio"] {
     color: red;
     display: none;
 }
+
 .show-icon {
     display: inline;
 }
+
 button {
     width: 100%;
     padding: 10px;
@@ -88,6 +94,7 @@ button {
     cursor: pointer;
     font-size: 16px;
 }
+
 button:hover {
     background-color: #f25116;
 }
