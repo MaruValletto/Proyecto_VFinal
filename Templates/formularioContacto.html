@@ -34,11 +34,18 @@
             </div>
 
             <div class="radio-group">
-                <label>Tipo de Servicio</label>
-                <input type="radio" id="dog-walking" name="service" value="dog-walking">
-                <label for="dog-walking">Paseo de Perros</label>
-                <input type="radio" id="pet-sitting" name="service" value="pet-sitting">
-                <label for="pet-sitting">Cuidado de Mascotas</label>
+                <label class="group-label">Tipo de Servicio</label>
+                <!-- Agrego un nuevo grupo para darle formato a la cajitas de botones de selección -->
+                <div class="radio-options">
+                    <div class="radio-item"> <!-- agrego contenedor para alinear -->
+                        <input type="radio" id="dog-walking" name="service" value="dog-walking">
+                        <label for="dog-walking">Paseo de Perros</label>
+                    </div>
+                    <div class="radio-item"> <!-- agrego contenedor para alinear -->
+                        <input type="radio" id="pet-sitting" name="service" value="pet-sitting">
+                        <label for="pet-sitting">Cuidado de Mascotas</label>
+                    </div>
+                </div>
             </div>
 
             <label for="subscription">Tipo de Suscripción</label>

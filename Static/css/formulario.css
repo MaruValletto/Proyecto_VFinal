@@ -55,10 +55,35 @@ input, textarea, select {
 input[type="radio"] {
     width: auto;
     accent-color: #f25116;
+    margin: 0; /* Eliminar cualquier margen del input */
+    vertical-align: middle; /* Alinear el botón de radio verticalmente con el texto */
+    
 }
 
 .radio-group {
     margin-bottom: 20px;
+    text-align: left; /* Alinea a la izquierda el contenido del grupo */
+}
+
+.group-label {
+    display: block;
+    margin-bottom: 10px; /* Espacio entre el título y las opciones */
+}
+
+.radio-options {
+    display: inline-flex; /* Mostrar los elementos en línea */
+}
+
+.radio-item {
+    display: flex;
+    align-items: baseline;
+    margin-right: 20px; /* Espacio entre los ítems */
+}
+
+.radio-item label {
+    margin-left: 5px; /* Espacio entre el botón de radio y el texto */
+    vertical-align: middle; /* Alinear verticalmente con el input */
+    line-height: 1.5; /* Ajustar según sea necesario */
 }
 
 .error {
