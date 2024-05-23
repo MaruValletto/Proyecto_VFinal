@@ -1,5 +1,6 @@
+/* Agrego Familia de letras */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
   box-sizing: border-box;
   font-family: 'Poppins',sans-serif;
@@ -8,7 +9,7 @@
 /* imagen de fondo */
 .todo {
    min-height: 100vh;
-   background-image: url(/Static/img/perro+pijama.jpg);
+   background-image: url(../img/perro+pijama.jpg);
    background-size: cover;
    background-position: center; /* Centra la imagen dentro del contenedor */
    background-repeat: no-repeat; /* Evita que la imagen se repita */
