@@ -14,7 +14,7 @@ body {
 
 .todo {
     min-height: 100vh;
-    background-image: url(/Static/img/peero+outside.jpg);
+    background-image: url(../img/peero+outside.jpg);
     background-size: cover;
     background-position: center; /* Centra la imagen dentro del contenedor */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
