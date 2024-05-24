@@ -1,88 +1,140 @@
+/* Agrego Familia de letras */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
- *{
-   box-sizing: border-box;
-   font-family: 'Poppins',sans-serif;
- }
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+   
+}
 
- body {
+body {
     margin: 0;
     padding: 0;
 }
 
 
 .todo {
-    background-image: url(Static/img/puppy-2785074_1280.jpg);
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+    min-height: 100vh;
+    background-image: url(../img/peero+outside.jpg);
+    background-size: cover;
     background-position: center; /* Centra la imagen dentro del contenedor */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
-.cont_logoybotones {
+/* header  */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 99;
+}
+
+.cont_logoybotones {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff8a;
+    border-radius: 10px;
+    padding: 10px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+/* Para que no subraye los hipervinculos*/
+.cont_logoybotones a {
+  text-decoration: none;
+  color: #a954cd; /*Color de los botones header*/
 }
 
 .logo {
-    max-width: 100%;
-    height: 80px;
-    flex: 1;
+  max-width: 100%;
+  height: 50px;
+  flex: 1;
+
 }
 
 .botones {
-    flex: 1;
-    display: flex;
-    align-items: center;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  font-weight: 500;
+  
 }
 
 .buscador,
-.registro,
+/* .registro, */
 .sesion,
 .ayuda,
 .favoritos {
-    flex: 1;
-    border: 1%;
-    margin: 2%;
-    text-align: center;
-    margin-left: 10px;
+  flex: 1;
+  margin: 2%;
+  text-align: center;
+  margin-left: 10px;
+
+}
+.buscador:hover{
+  transform: scale(1.1) translate(1%, 1%);
+  text-decoration:underline #a954cd 2px;
 }
 
-.buscador:hover{
-    transform: scale(150%) translate(1%, 1%);
-}
-.registro:hover{
-    transform: scale(150%) translate(1%, 1%);
-}
 .sesion:hover{
-    transform: scale(150%) translate(1%, 1%);
+  transform: scale(1.1) translate(1%, 1%);
+  text-decoration:underline #a954cd 2px;
 }
 .ayuda:hover{
-    transform: scale(150%) translate(1%, 1%);
+  transform: scale(1.1) translate(1%, 1%);
+  text-decoration:underline #a954cd 2px;
 }
 .favoritos:hover{
-    transform: scale(150%) translate(1%, 1%);
+  transform: scale(1.1) translate(1%, 1%);
+  text-decoration:underline #a954cd 2px;
 }
 
+/*Animación del Logo*/
+.logo:hover{
+  animation: tilt-n-move-shaking 0.5s infinite;
+}
+@keyframes tilt-n-move-shaking {
+  0% {transform: translate(0,0) rotate(0deg);}
+  25% {transform: translate(5px, 5px) rotate(5deg);}
+  50% {transform: translate(0,0) rotate(0deg);}
+  75% {transform: translate(-5px,5px) rotate(-5deg);}
+  100% {transform: translate(0,0) rotate(0deg);}
+}
+
+/* Texto principal */
+
 .cachorro{
+    margin-top: 15%;
     overflow: hidden;
     height: 500px;
     width: 100%;
     align-items: center;
-    color: #d682e7;
+    color: #9B63BF;
     font-size: larger;
     justify-content: center;
     text-align: center;
 }
 
 .nombre{
+    /* margin-top: 8%; */
     color: #F25116;
 }
 
 .acerca_de{
     text-align: center;
     color: rgb(64, 64, 65);
-    background-color: #efd5ffab;
+    background-color: #ffffff8a;
     border-radius: 12px;
     padding: 30px;
     margin: 20px;
@@ -93,9 +145,12 @@
 .resto{
     display: flex;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    padding: 2%;
+    padding: 1%;
     justify-content: space-evenly;
+    
 }
+
+/* tarjetas animadas */
 
 .ventaja_dueño,
 .ventaja_mascota,
@@ -105,31 +160,57 @@
     flex-wrap: wrap;
     color: rgb(64, 64, 65);
     border-radius: 12px;
-    padding: 30px;
-    margin: 20px;
+    padding: 15px;
+    margin: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-    text-align: justify;
-    background-color: #efd5ffab;
+    text-align:center;
+    background-color: #ffffff8a;
+    
 }
 
 .ventaja_dueño:hover{
     transform: scale(1.1) translate(1%, 1%);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-    text-align: justify;
+    text-align: center;
     transition: 1.5s;
 }
 .ventaja_mascota:hover{
     transform: scale(1.1) translate(1%, 1%);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-    text-align: justify;
+    text-align: center;
     transition: 1.5s;
 }
 .estamos_conectados:hover{
     transform: scale(1.1) translate(1%, 1%);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-    text-align: justify;
+    text-align: center;
     transition: 1.5s;
 }
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    height: 50px;
+    margin: 8px 10px;
+    background-color: #9B63BF;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    border: 2px solid #9B63BF;
+    text-align: center;
+}
+
+.button-link:hover {
+    background-color: #f25116;
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
 
 .main_foot {
     display: flex;
@@ -139,6 +220,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 2%;
 }
 
 .media-icons{
@@ -167,79 +249,98 @@
 }
 
 .footer {
-    color: grey;
-    border: 2%;
+    color: rgb(203, 202, 202);
     text-align: center;
+    font-weight: 500;
+    padding: 1%
 }
 
-/* Estilos específicos para dispositivos móviles */
-/* @media only screen and (max-width: 600px) {
-    .cont_logoybotones {
+.footer a {
+    text-decoration: none;
+    color: rgb(203, 202, 202);
+  }
+  
+  .footer a:hover {
+      text-decoration: underline;
+      color: #f25116;
+  }
+
+/* Media Queries */
+
+/* Mobile Phones */
+@media (max-width: 599px) {
+    .header {
+        padding: 10px;
         flex-direction: column;
     }
 
+    .cont_logoybotones {
+        flex-direction: column;
+        padding: 10px;
+    }
+
     .botones {
-        margin-top: 10px;
+        flex-direction: column;
     }
 
-    .buscador,
-    .registro,
-    .sesion,
-    .ayuda,
-    .favoritos {
-        margin: 5px 0;
+    .resto {
+        flex-direction: column;
     }
-} */
 
-/* Estilos para la sección principal */
-/* .cont_ppal {
-    padding: 20px;
-}
-
-.cachorro {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.nombre {
-    color: #FF69B4;
-} */
-
-/* Estilos para la sección "Acerca de" */
-/* .acerca_de {
-    background-color: #f0f0f0;
-    padding: 20px;
-    margin-bottom: 20px;
-} */
-
-/* Estilos para la sección "Resto" */
-/* .resto {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-bottom: 20px;
-} */
-
-/* Estilos para el footer */
-/* footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-.main_foot {
-    margin-bottom: 10px;
-}
-
-.media-icons a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-@media only screen and (max-width: 600px) {
-    footer {
-        font-size: 14px;
+    .ventaja_dueño,
+    .ventaja_mascota,
+    .estamos_conectados {
+        margin: 10px 0;
     }
-} */
+}
+
+/* Tablets */
+@media (min-width: 600px) and (max-width: 1023px) {
+    .header {
+        padding: 10px 50px;
+    }
+
+    .cont_logoybotones {
+        padding: 10px;
+    }
+
+    .botones {
+        font-size: 0.9em;
+    }
+
+    .resto {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .ventaja_dueño,
+    .ventaja_mascota,
+    .estamos_conectados {
+        margin: 10px 0;
+    }
+}
+
+/* Desktops and Laptops */
+@media (min-width: 1024px) {
+    .header {
+        padding: 20px 100px;
+    }
+
+    .cont_logoybotones {
+        padding: 20px;
+    }
+
+    .botones {
+        font-size: 1.1em;
+    }
+
+    .resto {
+        flex-direction: row;
+    }
+
+    .ventaja_dueño,
+    .ventaja_mascota,
+    .estamos_conectados {
+        margin: 10px;
+    }
+}
