@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const formulario = document.getElementById('formulario');
-    const inputs = formulario.querySelectorAll('input');
+    const inputs = formulario.querySelectorAll('input, textarea');
     const selects = formulario.querySelectorAll('select');
+    
 
     // Expresiones regulares para validación
     const expresiones = {
@@ -24,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
             case "subscription":
                 validarCampoSelect(e.target, "subscription");
                 break;
+            case "message":
+                validarCampoMensaje(e.target, "message");
         }
     }
 
@@ -60,6 +63,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Función para validar el campo de mensaje
+    const validarCampoMensaje = (input, campo) => {
+        if (input.value.trim() !== "") {
+            document.getElementById(campo).classList.remove('input-error');
+            document.querySelector(`#${campo} + .icon`).classList.remove('show-icon');
+        } else {
+            document.getElementById(campo).classList.add('input-error');
+            document.querySelector(`#${campo} + .icon`).classList.add('show-icon');
+        }
+    }
+
+
     // Agregar eventos de validación a los inputs y selects
     inputs.forEach((input) => {
         input.addEventListener('keyup', validarFormulario);
@@ -67,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     selects.forEach((select) => {
         select.addEventListener('change', validarFormulario);
-    });
+    });    
 
     // Validación al enviar el formulario
     formulario.addEventListener('submit', (e) => {

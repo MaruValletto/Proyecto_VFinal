@@ -80,12 +80,15 @@ label {
 
 input,
 textarea,
-select {
+select{
     width: 100%;
     padding: 10px;
     border: 2px solid #4a444e;
     border-radius: 4px;
     box-sizing: border-box;
+}
+#message{
+    height: 150px;
 }
 
 input[type="radio"] {
