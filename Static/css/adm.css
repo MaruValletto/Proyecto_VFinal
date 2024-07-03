@@ -81,14 +81,16 @@
 
 }
 
-.contenedor td {
+.contenedor td, 
+.contenedor th {
   padding: 20px; /* Más espacio en las celdas */
-  border-bottom: 1px solid #ddd; /* Líneas divisorias */
+  border-bottom: none; /* Líneas divisorias */
 }
 
 .contenedor td:last-child {
   border-bottom: none; /* Quita la línea divisoria del último elemento */
 }
+
 .contenedor a {
   text-decoration: none;
   color: #ffffff;
@@ -184,6 +186,13 @@ button:hover {
   color:#9B63BF
 }
 
+
+/* .contenedor-centrado {
+  display:flex;
+  width: 100%;
+  justify-content: center;
+  
+} */
 
 /* footer */
 .main_foot {
