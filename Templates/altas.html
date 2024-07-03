@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta</title>
+    <!-- Iconos Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Link Estilos -->
+    <link rel="stylesheet" href="../Static/css/adm.css">
+    <!-- Favicon -->
+    <link rel="icon" href="../Static/img/favicon.ico">
+    <!--Fuente-->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"> -->
+</head>
+
+<body>
+    <!--header | barra de navegación-->
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img src="../Static/img/Texto Logo.png" alt="Texto logo" class="logo">
+                </a>
+            </div>
+            <div class="title-container">
+                <div class="titulo">
+                    <h2>Agregar Usuarios</h2>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--enctype="multipart/form-data" es necesario para enviar archivos al back.-->
+    <div class="contenedor">
+        <form id="formulario" enctype="multipart/form-data">
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="imagenUsuario">Imagen del Usuario:</label>
+            <input type="file" id="imagenUsuario" name="imagen">
+
+            <br>
+
+            <button type="submit">Agregar Usuario</button>
+            <a href="adm.html">Menu principal</a>
+        </form>
+    </div>
+
+    <script>
+        const URL = "http://127.0.0.1:5000/"
+
+        //Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
+        //const URL = "https://USUARIO.pythonanywhere.com/"
+
+
+        // Capturamos el evento de envío del formulario
+        document.getElementById('formulario').addEventListener('submit', function (event) {
+            event.preventDefault(); // Evitamos que se envie el form 
+
+            var formData = new FormData(this);
+
+            // Realizamos la solicitud POST al servidor
+            fetch(URL + 'usuarios', {
+                method: 'POST',
+                body: formData // Aquí enviamos formData. Dado que formData puede contener archivos, no se utiliza JSON.
+            })
+
+                //Después de realizar la solicitud POST, se utiliza el método then() para manejar la respuesta del servidor.
+                .then(function (response) {
+                    if (response.ok) {
+                        //Si la respuesta es exitosa, convierte los datos de la respuesta a formato JSON.
+                        return response.json();
+                    } else {
+                        // Si hubo un error, lanzar explícitamente una excepción
+                        // para ser "catcheada" más adelante
+                        throw new Error('Error al agregar el usuario.');
+                    }
+                })
+
+                //Respuesta OK, muestra una alerta informando que el producto se agregó correctamente y limpia los campos del formulario para que puedan ser utilizados para un nuevo producto.
+                .then(function (data) {
+                    alert('Usuario agregado correctamente.');
+                })
+
+                // En caso de error, mostramos una alerta con un mensaje de error.
+                .catch(function (error) {
+                    alert('Error al agregar el usuario.');
+                })
+
+                // Limpiar el formulario en ambos casos (éxito o error)
+                .finally(function () {
+                    document.getElementById('nombre').value = "";
+                    document.getElementById('apellido').value = "";
+                    document.getElementById('email').value = "";
+                    document.getElementById('imagenUsuario').value = "";
+                });
+        })
+    </script>
+
+
+    <!--footer-->
+    <footer>
+        <div class="main_foot">
+            <div class="media-icons">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-whatsapp"></i></a>
+            </div>
+            <div class="footer">
+                <p>&copy; 2024 Cuidando Peluditos. Todos los derechos reservados.</p>
+                <p>
+                    <a href="#about">Términos y Condiciones</a> |
+                    <a href="../Templates/formularioContacto.html">Contacto</a> |
+                    <a href="#admin">Administrar Cuidadores</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+
+</html>
