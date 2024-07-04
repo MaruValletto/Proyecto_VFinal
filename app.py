@@ -17,8 +17,6 @@ import os
 import time
 #--------------------------------------------------------------------
 
-
-
 app = Flask(__name__)
 CORS(app)  # Esto habilitará CORS para todas las rutas
 
@@ -51,8 +49,8 @@ class Usuarios:
         self.cursor.execute('''CREATE TABLE IF NOT EXISTS usuarios (
             id INT AUTO_INCREMENT PRIMARY KEY,
             nombre VARCHAR(255) NOT NULL,
-            correo VARCHAR(255) NOT NULL UNIQUE,
-            contrasena VARCHAR(255) NOT NULL,
+            apellido VARCHAR(255) NOT NULL UNIQUE,
+            email VARCHAR(255) NOT NULL,
             imagen_url VARCHAR(255)
         )''')
         self.conn.commit()
@@ -62,9 +60,9 @@ class Usuarios:
         self.cursor = self.conn.cursor(dictionary=True)
         
     #----------------------------------------------------------------
-    def agregar_usuario(self, nombre, correo, contrasena, imagen):
-        sql = "INSERT INTO usuarios (nombre, correo, contrasena, imagen_url) VALUES (%s, %s, %s, %s)"
-        valores = (nombre, correo, contrasena, imagen)
+    def agregar_usuario(self, nombre, apellido, email, imagen):
+        sql = "INSERT INTO usuarios (nombre, apellido, email, imagen_url) VALUES (%s, %s, %s, %s)"
+        valores = (nombre, apellido, email, imagen)
 
         self.cursor.execute(sql, valores)        
         self.conn.commit()
@@ -77,9 +75,9 @@ class Usuarios:
         return self.cursor.fetchone()
 
     #----------------------------------------------------------------
-    def modificar_usuario(self, id, nuevo_nombre, nuevo_correo, nueva_contrasena, nueva_imagen):
-        sql = "UPDATE usuarios SET nombre = %s, correo = %s, contrasena = %s, imagen_url = %s WHERE id = %s"
-        valores = (nuevo_nombre, nuevo_correo, nueva_contrasena, nueva_imagen, id)
+    def modificar_usuario(self, id, nuevo_nombre, nueva_imagen):
+        sql = "UPDATE usuarios SET nombre = %s, imagen_url = %s WHERE id = %s"
+        valores = (nuevo_nombre, nueva_imagen, id)
         self.cursor.execute(sql, valores)
         self.conn.commit()
         return self.cursor.rowcount > 0
@@ -102,13 +100,13 @@ class Usuarios:
         # Mostramos los datos de un usuario a partir de su id
         usuario = self.consultar_usuario(id)
         if usuario:
-            print("-" * 40)
+            print("-" * 5)
             print(f"ID.....: {usuario['id']}")
             print(f"Nombre: {usuario['nombre']}")
-            print(f"Correo...: {usuario['correo']}")
-            print(f"Contraseña.....: {usuario['contrasena']}")
+            print(f"apellido...: {usuario['apellido']}")
+            print(f"Contraseña.....: {usuario['email']}")
             print(f"Imagen.....: {usuario['imagen_url']}")
-            print("-" * 40)
+            print("-" * 5)
         else:
             print("Usuario no encontrado.")
 
@@ -155,8 +153,8 @@ def mostrar_usuario(id):
 def agregar_usuario():
     #Recojo los datos del form
     nombre = request.form['nombre']
-    correo = request.form['correo']
-    contrasena = request.form['contrasena']
+    apellido = request.form['apellido']
+    email = request.form['email']
     imagen = request.files['imagen']
     nombre_imagen=""
 
@@ -166,7 +164,7 @@ def agregar_usuario():
     nombre_base, extension = os.path.splitext(nombre_imagen) #Separa el nombre del archivo de su extensión.
     nombre_imagen = f"{nombre_base}_{int(time.time())}{extension}" #Genera un nuevo nombre para la imagen usando un timestamp, para evitar sobreescrituras y conflictos de nombres.
 
-    nuevo_id = usuarios.agregar_usuario(nombre, correo, contrasena, nombre_imagen)
+    nuevo_id = usuarios.agregar_usuario(nombre, apellido, email, nombre_imagen)
     if nuevo_id:    
         imagen.save(os.path.join(RUTA_DESTINO, nombre_imagen))
 
@@ -184,8 +182,8 @@ def agregar_usuario():
 def modificar_usuario(id):
     #Se recuperan los nuevos datos del formulario
     nuevo_nombre = request.form.get("nombre")
-    nuevo_correo = request.form.get("correo")
-    nueva_contrasena = request.form.get("contrasena")
+    nuevo_apellido = request.form.get("apellido")
+    nueva_email = request.form.get("email")
     
     
     # Verifica si se proporcionó una nueva imagen
@@ -218,7 +216,7 @@ def modificar_usuario(id):
 
 
     # Se llama al método modificar_usuario pasando el id del usuario y los nuevos datos.
-    if usuarios.modificar_usuario(id, nuevo_nombre, nuevo_correo, nueva_contrasena, nombre_imagen):
+    if usuarios.modificar_usuario(id, nuevo_nombre, nombre_imagen):
         
         #Si la actualización es exitosa, se devuelve una respuesta JSON con un mensaje de éxito y un código de estado HTTP 200 (OK).
         return jsonify({"mensaje": "Usuario modificado"}), 200
@@ -256,5 +254,12 @@ def eliminar_usuario(id):
         return jsonify({"mensaje": "Usuario no encontrado"}), 404
 
 #--------------------------------------------------------------------
+
+# Ruta raíz para mensaje de bienvenida o redirección
+@app.route("/")
+def index():
+    return "¡Bienvenido a la aplicación de gestión de usuarios!"
+
+
 if __name__ == "__main__":
     app.run(debug=True)
