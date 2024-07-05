@@ -60,6 +60,8 @@ class Usuarios:
         self.cursor = self.conn.cursor(dictionary=True)
         
     #----------------------------------------------------------------
+    # creamos una función para insertar registros
+
     def agregar_usuario(self, nombre, apellido, email, imagen):
         sql = "INSERT INTO usuarios (nombre, apellido, email, imagen_url) VALUES (%s, %s, %s, %s)"
         valores = (nombre, apellido, email, imagen)
@@ -101,11 +103,11 @@ class Usuarios:
         usuario = self.consultar_usuario(id)
         if usuario:
             print("-" * 5)
-            print(f"ID.....: {usuario['id']}")
-            print(f"Nombre: {usuario['nombre']}")
-            print(f"apellido...: {usuario['apellido']}")
-            print(f"Contraseña.....: {usuario['email']}")
-            print(f"Imagen.....: {usuario['imagen_url']}")
+            print(f"ID.....:            {usuario['id']}")
+            print(f"Nombre:             {usuario['nombre']}")
+            print(f"apellido...:        {usuario['apellido']}")
+            print(f"Contraseña.....:    {usuario['email']}")
+            print(f"Imagen.....:        {usuario['imagen_url']}")
             print("-" * 5)
         else:
             print("Usuario no encontrado.")
@@ -115,11 +117,11 @@ class Usuarios:
 # Cuerpo del programa
 #--------------------------------------------------------------------
 # Crear una instancia de la clase Usuarios
-usuarios = Usuarios(host='localhost', user='root', password='', database='miapp', port=3307)
+usuarios = Usuarios(host='localhost', user='root', password='', database='miapp3', port=3307)
 
 
 # Carpeta para guardar las imagenes.
-RUTA_DESTINO = './static/imagenes/'
+RUTA_DESTINO = './Static/img'
 
 #Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
 #RUTA_DESTINO = '/home/USUARIO/mysite/static/imagenes'
@@ -152,10 +154,10 @@ def mostrar_usuario(id):
 @app.route("/usuarios", methods=["POST"])
 def agregar_usuario():
     #Recojo los datos del form
-    nombre = request.form['nombre']
-    apellido = request.form['apellido']
-    email = request.form['email']
-    imagen = request.files['imagen']
+    nombre =    request.form['nombre']
+    apellido =  request.form['apellido']
+    email =     request.form['email']
+    imagen =    request.files['imagen']
     nombre_imagen=""
 
     
