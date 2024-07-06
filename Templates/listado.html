@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listado</title>
+    <title>Listado de Usuarios</title>
     <!-- Iconos Link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Link Estilos -->
@@ -40,7 +40,7 @@
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Email</th>
-                    <th>Imagen</th>
+                    <th>Foto Perfil</th>
                 </tr>
             </thead>
             <tbody id="tablaUsuarios"> </tbody>
@@ -71,7 +71,7 @@
 
             //Esta función maneja los datos convertidos del JSON.
             .then(function (data) {
-                let tablausuarios = document.getElementById('tablausuarios'); //Selecciona el elemento del DOM donde se mostrarán los usuarios.
+                let tablausuarios = document.getElementById('tablaUsuarios'); //Selecciona el elemento del DOM donde se mostrarán los usuarios.
 
                 // Iteramos sobre cada usuario y agregamos filas a la tabla
                 for (let usuario of data) {
@@ -81,7 +81,7 @@
                         '<td align="right">' + usuario.apellido + '</td>' +
                         '<td align="right">' + usuario.email + '</td>' +
                         // Mostrar miniatura de la imagen
-                        '<td><img src=./static/imagenes/' + usuario.imagen_url + ' alt="Imagen del usuario" style="width: 100px;"></td>' + '<td align="right">' + usuario.proveedor + '</td>';
+                        '<td><img src=../Static/img' + usuario.imagen_url + ' alt="Imagen del usuario" style="width: 100px;"></td>' + '<td align="right">' + usuario.proveedor + '</td>';
 
                     //Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
                     //'<td><img src=https://www.pythonanywhere.com/user/USUARIO/files/home/USUARIO/mysite/static/imagenes/' + usuario.imagen_url +' alt="Imagen del usuario" style="width: 100px;"></td>' + '<td align="right">' + usuario.proveedor + '</td>';

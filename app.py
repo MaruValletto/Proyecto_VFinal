@@ -49,7 +49,7 @@ class Usuarios:
         self.cursor.execute('''CREATE TABLE IF NOT EXISTS usuarios (
             id INT AUTO_INCREMENT PRIMARY KEY,
             nombre VARCHAR(255) NOT NULL,
-            apellido VARCHAR(255) NOT NULL UNIQUE,
+            apellido VARCHAR(255) NOT NULL,
             email VARCHAR(255) NOT NULL,
             imagen_url VARCHAR(255)
         )''')
