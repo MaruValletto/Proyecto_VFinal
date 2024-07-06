@@ -105,8 +105,8 @@ class Usuarios:
             print("-" * 5)
             print(f"ID.....:            {usuario['id']}")
             print(f"Nombre:             {usuario['nombre']}")
-            print(f"apellido...:        {usuario['apellido']}")
-            print(f"Contraseña.....:    {usuario['email']}")
+            print(f"Apellido...:        {usuario['apellido']}")
+            print(f"Email.....:         {usuario['email']}")
             print(f"Imagen.....:        {usuario['imagen_url']}")
             print("-" * 5)
         else:

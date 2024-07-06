@@ -32,9 +32,9 @@
         </nav>
     </header>
 
-    <div class="contenedor">
+    <div class="contenedor1">
         <table> <!-- Se crea una tabla para mostrar los usuarios. -->
-            <thead> <!--Encabezado de la tabla con columnas para id, nombre, apellido, email y acciones.-->
+            <thead> <!--Encabezado de la tabla con columnas para id, nombre, apellido, email y foto.-->
                 <tr>
                     <th>Id</th>
                     <th>Nombre</th>
@@ -45,11 +45,13 @@
             </thead>
             <tbody id="tablaUsuarios"> </tbody>
         </table><br>
-
-        <!-- <div class="contenedor-centrado">
-            <a href="adm.html">Menu principal</a>
-        </div> -->
+    
+        <!-- Falta acomodarlo desde el formato para que aparezca abajo. -->
+    <div class="contenedor-centrado">
+        <a href="adm.html">Menu principal</a>
     </div>
+    </div>
+
     <script>
         const URL = "http://127.0.0.1:5000/"
 
@@ -76,12 +78,12 @@
                 // Iteramos sobre cada usuario y agregamos filas a la tabla
                 for (let usuario of data) {
                     let fila = document.createElement('tr'); //Crea una nueva fila de tabla (<tr>) para cada usuario.
-                    fila.innerHTML = '<td>' + usuario.id + '</td>' +
-                        '<td>' + usuario.nombre + '</td>' +
-                        '<td align="right">' + usuario.apellido + '</td>' +
-                        '<td align="right">' + usuario.email + '</td>' +
-                        // Mostrar miniatura de la imagen
-                        '<td><img src=../Static/img' + usuario.imagen_url + ' alt="Imagen del usuario" style="width: 100px;"></td>' + '<td align="right">' + usuario.proveedor + '</td>';
+                    fila.innerHTML =  '<td>' + usuario.id + '</td>' +
+                                      '<td>' + usuario.nombre + '</td>' +
+                                      '<td align="right">' + usuario.apellido + '</td>' +
+                                      '<td align="right">' + usuario.email + '</td>' +
+                                      // Mostrar miniatura de la imagen
+                                      '<td><img src=../Static/img/' + usuario.imagen_url + ' alt="Imagen del usuario" style="width: 100px;"></td>';
 
                     //Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
                     //'<td><img src=https://www.pythonanywhere.com/user/USUARIO/files/home/USUARIO/mysite/static/imagenes/' + usuario.imagen_url +' alt="Imagen del usuario" style="width: 100px;"></td>' + '<td align="right">' + usuario.proveedor + '</td>';
