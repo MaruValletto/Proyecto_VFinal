@@ -30,6 +30,7 @@ class Usuarios:
             host=host,
             user=user,
             password=password,
+            database=database,
 			port=port
         )
         self.cursor = self.conn.cursor()
@@ -77,9 +78,9 @@ class Usuarios:
         return self.cursor.fetchone()
 
     #----------------------------------------------------------------
-    def modificar_usuario(self, id, nuevo_nombre, nueva_imagen):
+    def modificar_usuario(self, id, nuevo_nombre, nuevo_apellido, nueva_imagen):
         sql = "UPDATE usuarios SET nombre = %s, imagen_url = %s WHERE id = %s"
-        valores = (nuevo_nombre, nueva_imagen, id)
+        valores = (nuevo_nombre, nuevo_apellido, nueva_imagen, id)
         self.cursor.execute(sql, valores)
         self.conn.commit()
         return self.cursor.rowcount > 0
@@ -185,8 +186,7 @@ def modificar_usuario(id):
     #Se recuperan los nuevos datos del formulario
     nuevo_nombre = request.form.get("nombre")
     nuevo_apellido = request.form.get("apellido")
-    nueva_email = request.form.get("email")
-    
+    nueva_imagen = request.form.get("imagen")
     
     # Verifica si se proporcionó una nueva imagen
     if 'imagen' in request.files:
@@ -216,16 +216,14 @@ def modificar_usuario(id):
         if usuario:
             nombre_imagen = usuario["imagen_url"]
 
-
     # Se llama al método modificar_usuario pasando el id del usuario y los nuevos datos.
-    if usuarios.modificar_usuario(id, nuevo_nombre, nombre_imagen):
+    if usuarios.modificar_usuario(id, nuevo_nombre, nuevo_apellido, nombre_imagen):
         
         #Si la actualización es exitosa, se devuelve una respuesta JSON con un mensaje de éxito y un código de estado HTTP 200 (OK).
         return jsonify({"mensaje": "Usuario modificado"}), 200
     else:
         #Si el usuario no se encuentra (por ejemplo, si no hay ningún usuario con el id dado), se devuelve un mensaje de error con un código de estado HTTP 404 (No Encontrado).
         return jsonify({"mensaje": "Usuario no encontrado"}), 403
-
 
 
 #--------------------------------------------------------------------
