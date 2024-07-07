@@ -78,6 +78,30 @@
         </div>
     </div>
 
+    <!-- Formulario emergente para agregar usuario -->
+    <div id="modalAgregar" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Agregar Usuario</h2>
+            <form id="form-agregar-usuario" enctype="multipart/form-data">
+                <label for="nombreAgregar">Nombre:</label>
+                <input type="text" id="nombreAgregar" name="nombre" required><br>
+
+                <label for="apellidoAgregar">Apellido:</label>
+                <input type="text" id="apellidoAgregar" name="apellido" required><br>
+
+                <label for="emailAgregar">Email:</label>
+                <input type="email" id="emailAgregar" name="email" required><br>
+
+                <label for="imagenAgregar">Imagen del Usuario:</label>
+                <input type="file" id="imagenAgregar" name="imagen"><br>
+
+                <button type="submit">Agregar Usuario</button>
+                <button type="button" class="cancelar">Cancelar</button>
+            </form>
+        </div>
+    </div>
+
     <script>
         const URL = "http://127.0.0.1:5000/";
 
