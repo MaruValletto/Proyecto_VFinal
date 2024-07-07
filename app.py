@@ -79,7 +79,7 @@ class Usuarios:
 
     #----------------------------------------------------------------
     def modificar_usuario(self, id, nuevo_nombre, nuevo_apellido, nueva_imagen):
-        sql = "UPDATE usuarios SET nombre = %s, imagen_url = %s WHERE id = %s"
+        sql = "UPDATE usuarios SET nombre = %s, apellido = %s, imagen_url = %s WHERE id = %s"
         valores = (nuevo_nombre, nuevo_apellido, nueva_imagen, id)
         self.cursor.execute(sql, valores)
         self.conn.commit()
@@ -146,7 +146,8 @@ def mostrar_usuario(id):
     if usuario:
         return jsonify(usuario), 201
     else:
-        return "Usuario no encontrado", 404
+        return jsonify({"mensaje": "Usuario no encontrado"}), 404
+        #return "Usuario no encontrado", 404 MODIFICO ESTO
 
 
 #--------------------------------------------------------------------
@@ -186,7 +187,7 @@ def modificar_usuario(id):
     #Se recuperan los nuevos datos del formulario
     nuevo_nombre = request.form.get("nombre")
     nuevo_apellido = request.form.get("apellido")
-    nueva_imagen = request.form.get("imagen")
+    #nueva_imagen = request.form.get("imagen")
     
     # Verifica si se proporcionó una nueva imagen
     if 'imagen' in request.files:
