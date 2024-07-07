@@ -224,9 +224,11 @@ button:hover {
 
 /* esto contiene el link al menu principal de LISTADO*/
 .contenedor-centrado {
+  padding: 2%;
   display:flex;
   width: 100%;
   justify-content: center;
+
 } 
 
 /* footer */
@@ -282,3 +284,4 @@ button:hover {
   text-decoration: underline;
   color: #f25116;
 }
+
