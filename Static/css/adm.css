@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 *{
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
   box-sizing: border-box;
   font-family: 'Poppins',sans-serif;
 } 
@@ -151,11 +151,22 @@ form {
   color: #ffffff;
   font-size: 1.05em;
   font-weight: bold;
+  align-content: flex-start;
 }
 
  label {
   display: block;
   margin-bottom: 5px;
+}
+
+input[type="int"],
+textarea {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
 input[type="text"],
@@ -272,7 +283,7 @@ button:hover {
 .footer {
   color: grey;
   text-align: center;
-  padding: 30px;
+  padding: 20px;
 }
 
 .footer a {

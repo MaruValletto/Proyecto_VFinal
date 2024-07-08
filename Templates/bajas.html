@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Usuarios</title>
+    <!-- Iconos Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Link Estilos -->
+    <link rel="stylesheet" href="../Static/css/adm.css">
+    <!-- Favicon -->
+    <link rel="icon" href="../Static/img/favicon.ico">
+    <!--Fuente-->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"> -->
+</head>
+
+<body>
+    <!--header | barra de navegación-->
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img src="../Static/img/Texto Logo.png" alt="Texto logo" class="logo">
+                </a>
+            </div>
+            <div class="title-container">
+                <div class="titulo">
+                    <h2>Eliminar Usuarios</h2>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="contenedor1">
+            <table id="UsuariosTable">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Foto de Perfil</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+            <tbody>
+                <!-- Aquí se insertarán los usuarios obtenidos de la API -->
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Falta acomodarlo desde el formato para que aparezca abajo. -->
+    <div class="contenedor-centrado">
+        <a href="adm.html" class="buscador">Menu principal</a>
+    </div>
+
+    <script>
+        const URL = "http://127.0.0.1:5000/";
+
+        // Función para obtener la lista de usuarios
+        function obtenerUsuarios() {
+            fetch(URL + 'usuarios')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Error al obtener los Usuarios.');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const UsuariosTable = document.getElementById('UsuariosTable').getElementsByTagName('tbody')[0];
+                    UsuariosTable.innerHTML = ""; // Limpiar la tabla antes de agregar los nuevos datos
+                    data.forEach(usuario => {
+                        const row = UsuariosTable.insertRow();
+                        row.innerHTML = `
+                            <td>${usuario.id}</td>
+                            <td>${usuario.nombre}</td>
+                            <td>${usuario.apellido}</td>
+                            <td>${usuario.imagen_url}</td>
+                            <td><button onclick="eliminarusuario('${usuario.id}')">Eliminar</button></td>
+                        `;
+                    });
+                })
+                .catch(error => {
+                    alert(error.message);
+                });
+        }
+
+        // Función para eliminar un usuario
+        function eliminarusuario(id) {
+            fetch(URL + `usuarios/${id}`, { method: 'DELETE' })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Error al eliminar el usuario.');
+                    }
+                    alert('Usuario eliminado exitosamente.');
+                    obtenerUsuarios(); // Actualizar la lista de usuarios después de eliminar
+                })
+                .catch(error => {
+                    alert(error.message);
+                });
+        }
+
+        // Cargar la lista de usuarios cuando se carga la página
+        document.addEventListener('DOMContentLoaded', obtenerUsuarios);
+    </script>
+
+    <!--footer-->
+    <footer>
+        <div class="main_foot">
+            <div class="media-icons">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-whatsapp"></i></a>
+            </div>
+            <div class="footer">
+                <p>&copy; 2024 Cuidando Peluditos. Todos los derechos reservados.</p>
+                <p>
+                    <a href="#about">Términos y Condiciones</a> |
+                    <a href="../Templates/formularioContacto.html">Contacto</a> |
+                    <a href="#admin">Administrar Cuidadores</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
