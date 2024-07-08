@@ -64,6 +64,7 @@
   align-items: center;
   height: 75vh; /* Utiliza el 100% del alto de la ventana */
   background-color: #9B63BF; /* Color de fondo deseado */
+  overflow: auto; /* Para permitir el desplazamiento si el contenido es demasiado grande */
 
 }
 
@@ -71,9 +72,9 @@
   text-align: center;
   border-collapse: separate;
   border-spacing: 10px; /* Para evitar separación entre celdas */
-  width: 80%;
+  width: 100%;
   height: 40%;
-  max-width: 800px; /* Ancho máximo para el contenedor de la tabla */
+  max-width: 900px; /* Ancho máximo para el contenedor de la tabla */
   /* padding: 20px; */
   background-color: #b387cf;
   /* border: 1px solid lightslategray; */
@@ -81,17 +82,42 @@
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
   overflow: hidden; /* Para mantener los bordes redondeados */
   /* margin-top: 0vh; */
+  margin-bottom: 20px; /* Agrega un margen al final */
 }
 
-.contenedor td, 
+.contenedor th {
+  padding: 20px; /* Espacio en las celdas del encabezado */
+  font-size: 1.2em; /* Tamaño de fuente más grande */
+  background-color: #9B63BF; /* Color de fondo del encabezado */
+  color: #ffffff; /* Color del texto del encabezado */
+  border-bottom: 2px solid #ffffff;
+}
+
+.contenedor td {
+  padding: 20px; /* Espacio en las celdas de datos */
+  border-top: 1px solid #dddddd; /* Línea divisoria entre filas */
+}
+
+
+.contenedor th,
+.contenedor td {
+  padding: 15px; /* Espacio en las celdas */
+  font-size: 1.1em; /* Tamaño de fuente */
+  background-color: #9B63BF; /* Color de fondo del encabezado */
+  color: #ffffff; /* Color del texto del encabezado */
+  border: 1px solid #9B63BF; /* Borde alrededor de cada celda */
+}
+
+
+/*.contenedor td, 
 .contenedor th {
   padding: 20px; /* Más espacio en las celdas */
-  border-bottom: none; /* Líneas divisorias */
-}
+  /*border-bottom: none; /* Líneas divisorias */
+/*}
 
 .contenedor td:last-child {
   border-bottom: none; /* Quita la línea divisoria del último elemento */
-}
+/*}*/
 
 .contenedor a {
   text-decoration: none;
@@ -117,9 +143,9 @@
 .contenedor1 table {
   text-align: center;
   border-collapse: separate;
-  border-spacing: 10px; /* Para evitar separación entre celdas */
+  border-spacing: 20px;  /*Para evitar separación entre celdas */
   width: 100%;
-  height: 100%;
+  height: 70%;
   max-width: 800px; /* Ancho máximo para el contenedor de la tabla */
   /* padding: 20px; */
   background-color: #b387cf;
@@ -127,7 +153,7 @@
   border-radius: 15px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
   overflow: hidden; /* Para mantener los bordes redondeados */
-  margin-top: 10vh;
+  margin-top: 15vh;
 }
 
 .contenedor1{
