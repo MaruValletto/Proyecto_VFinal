@@ -106,8 +106,8 @@
 
 /* Formato de la iamgen en la tabla de LISTADO*/
 .contenedor1 img{
-  height: 85px; 
-  width: 85px;
+  height: 75px; 
+  width: 60px;
   border: 2px solid #ffff;
   border-radius: 50%;
   object-fit: cover;
@@ -140,7 +140,7 @@
   flex-wrap: wrap;
   overflow: auto;
   color: white;
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 /*formulario altas*/
@@ -256,7 +256,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 30px;
+  padding: 20px;
   left: 0;
 }
 
@@ -288,7 +288,7 @@ button:hover {
 .footer {
   color: grey;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .footer a {
@@ -316,15 +316,15 @@ button:hover {
 }
 
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
+  background-color: #e0dede;
+  margin: 8% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
 }
 
 .close {
-  color: #aaa;
+  color: #9B63BF;
   float: right;
   font-size: 28px;
   font-weight: bold;
