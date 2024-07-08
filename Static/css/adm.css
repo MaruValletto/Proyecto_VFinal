@@ -1,0 +1,355 @@
+/* Agrego Familia de letras */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+*{
+  margin: 0;
+  /* padding: 0; */
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+} 
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 9px;
+    padding: 10px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ajusta el ancho según sea necesario */
+    max-width: 100%; /* Evita que se desborde */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Opcional: añade una sombra para mayor contraste */
+}
+
+.navbar .logo {
+    height: 45px; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+.navbar .title-container {
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center;
+  flex: 1; /* Ajusta la proporción según sea necesario */
+}
+
+.navbar .title-container h2 {
+  margin: 0; /* Elimina el margen por defecto */
+  text-align: center; /* Asegura que el texto esté centrado */
+  font-size: 1.4em;
+  color: #9B63BF;
+}
+
+.button-container{
+  margin-left: auto;
+}
+
+/*Animación del Logo*/
+.logo:hover{
+  animation: tilt-n-move-shaking 0.5s infinite;
+}
+@keyframes tilt-n-move-shaking {
+  0% {transform: translate(0,0) rotate(0deg);}
+  25% {transform: translate(5px, 5px) rotate(5deg);}
+  50% {transform: translate(0,0) rotate(0deg);}
+  75% {transform: translate(-5px,5px) rotate(-5deg);}
+  100% {transform: translate(0,0) rotate(0deg);}
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh; /* Utiliza el 100% del alto de la ventana */
+  background-color: #9B63BF; /* Color de fondo deseado */
+
+}
+
+.contenedor table {
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 10px; /* Para evitar separación entre celdas */
+  width: 80%;
+  height: 40%;
+  max-width: 800px; /* Ancho máximo para el contenedor de la tabla */
+  /* padding: 20px; */
+  background-color: #b387cf;
+  /* border: 1px solid lightslategray; */
+  border-radius: 15px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden; /* Para mantener los bordes redondeados */
+  /* margin-top: 0vh; */
+}
+
+.contenedor td, 
+.contenedor th {
+  padding: 20px; /* Más espacio en las celdas */
+  border-bottom: none; /* Líneas divisorias */
+}
+
+.contenedor td:last-child {
+  border-bottom: none; /* Quita la línea divisoria del último elemento */
+}
+
+.contenedor a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.contenedor a:hover {
+  color: #f25116;
+}
+
+/* Formato de la iamgen en la tabla de LISTADO*/
+.contenedor1 img{
+  height: 75px; 
+  width: 60px;
+  border: 2px solid #ffff;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Para Tabla LISTADO*/
+.contenedor1 table {
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 10px; /* Para evitar separación entre celdas */
+  width: 100%;
+  height: 100%;
+  max-width: 800px; /* Ancho máximo para el contenedor de la tabla */
+  /* padding: 20px; */
+  background-color: #b387cf;
+  /* border: 1px solid lightslategray; */
+  border-radius: 15px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden; /* Para mantener los bordes redondeados */
+  margin-top: 10vh;
+}
+
+.contenedor1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh; /* Utiliza el 100% del alto de la ventana */
+  background-color: #9B63BF; /* Color de fondo deseado */
+  align-content: flex-start;
+  flex-wrap: wrap;
+  overflow: auto;
+  color: white;
+  font-size: 1em;
+}
+
+/*formulario altas*/
+form {
+  max-width: 600px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #b387cf;
+  border-radius: 15px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden; /* Para mantener los bordes redondeados */
+  color: #ffffff;
+  font-size: 1.05em;
+  font-weight: bold;
+  align-content: flex-start;
+}
+
+ label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="int"],
+textarea {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+
+input[type="file"] {
+  padding: 10px;
+  margin: 4px;
+  /* background-color: #007bff; */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  width: 95%;
+}
+
+input[type="file"]:hover {
+  background-color: #9B63BF; /* Color de fondo al pasar el mouse */
+}
+
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+button {
+  padding: 10px;
+  margin-top: 8px;
+  background-color: #f25116;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 90%;
+  font-weight: 700
+}
+
+button:hover {
+  background-color: #9B63BF;
+}
+
+.formulario a {
+  padding: 8px;
+  margin: 4px;
+  /* background-color: #fdab13; */
+  color: #e810d3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 85%;
+  font-weight: 800;
+}
+
+.formulario a:hover {
+  color:#9B63BF
+}
+
+/* esto contiene el link al menu principal de LISTADO*/
+.contenedor-centrado {
+  padding: 2%;
+  display:flex;
+  width: 100%;
+  justify-content: center;
+
+} 
+
+/* footer */
+.main_foot {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  left: 0;
+}
+
+.media-icons{
+  margin-top: 10px;
+  display: flex;
+}
+
+.media-icons a{
+  text-align: center;
+  line-height: 33px;
+  height: 35px;
+  width: 35px;
+  margin: 0 4px;
+  font-size: 18px;
+  color: #FFF;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: #9B63BF;
+  transition: all 0.3s ease;
+}
+
+.media-icons a:hover{
+  color: #f25116;
+  background-color: #fff;
+  border-color: #f25116;
+}
+
+.footer {
+  color: grey;
+  text-align: center;
+  padding: 10px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: grey;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: #f25116;
+}
+
+/* Estilos para el modal */
+.modal {
+  display: none; /* Ocultar el modal por defecto */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #e0dede;
+  margin: 8% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #9B63BF;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.agregar-btn {
+  background-color: #f25116;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 90%;
+  font-weight: 700;
+  border-radius:5px;
+  cursor: pointer;
+}
+
+.agregar-btn:hover {
+  background-color: #9B63BF;
+}
+
