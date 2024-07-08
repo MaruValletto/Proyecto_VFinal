@@ -24,14 +24,13 @@ CORS(app)  # Esto habilitará CORS para todas las rutas
 class Usuarios:
     #----------------------------------------------------------------
     # Constructor de la clase
-    def __init__(self, host, user, password, database, port=3307):
+    def __init__(self, host, user, password, database):
         # Primero, establecemos una conexión sin especificar la base de datos
         self.conn = mysql.connector.connect(
             host=host,
             user=user,
             password=password,
-            database=database,
-			port=port
+            database=database
         )
         self.cursor = self.conn.cursor()
 
@@ -118,14 +117,15 @@ class Usuarios:
 # Cuerpo del programa
 #--------------------------------------------------------------------
 # Crear una instancia de la clase Usuarios
-usuarios = Usuarios(host='localhost', user='root', password='', database='miapp3', port=3307)
+#usuarios = Usuarios(host='localhost', user='root', password='', database='miapp3', port=3307)
+usuarios = Usuarios(host='Marianela.mysql.pythonanywhere-services.com', user='Marianela', password='aNaHmNM8!CcbdFx', database='Marianela$miapp3')
 
 
 # Carpeta para guardar las imagenes.
-RUTA_DESTINO = './Static/img'
+#RUTA_DESTINO = './Static/img'
 
 #Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
-#RUTA_DESTINO = '/home/USUARIO/mysite/static/imagenes'
+RUTA_DESTINO = '/home/Marianela/mysite/Static/img'
 
 
 #--------------------------------------------------------------------
