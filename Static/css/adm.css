@@ -160,7 +160,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 75vh; /* Utiliza el 100% del alto de la ventana */
+  height: 83vh; /* Utiliza el 100% del alto de la ventana */
   background-color: #9B63BF; /* Color de fondo deseado */
   align-content: flex-start;
   flex-wrap: wrap;
