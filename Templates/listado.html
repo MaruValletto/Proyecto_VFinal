@@ -134,8 +134,8 @@
                                       '<td><img src="../Static/img/' + usuario.imagen_url + '" alt="Imagen del usuario" style="width: 100px;"></td>' +
                                       // Agregar botones de acción
                                       '<td>' +
-                                      '<button onclick="eliminarusuario(\'' + usuario.id + '\')">Eliminar</button> ' +
-                                      '<button onclick="mostrarFormularioModificar(\'' + usuario.id + '\')">Modificar</button>' +
+                                      '<button onclick="eliminarusuario(' + usuario.id + ')">Eliminar</button> ' +
+                                      '<button onclick="mostrarFormularioModificar(' + usuario.id + ')">Modificar</button>' +
                                       '</td>';
 
                     // Una vez que se crea la fila con el contenido del usuario, se agrega a la tabla utilizando el método appendChild del elemento tablausuarios.

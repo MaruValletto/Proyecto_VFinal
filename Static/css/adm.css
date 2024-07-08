@@ -346,6 +346,7 @@ button:hover {
   font-size: 90%;
   font-weight: 700;
   border-radius:5px;
+  cursor: pointer;
 }
 
 .agregar-btn:hover {
