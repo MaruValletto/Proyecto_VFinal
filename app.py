@@ -125,7 +125,7 @@ usuarios = Usuarios(host='Marianela.mysql.pythonanywhere-services.com', user='Ma
 #RUTA_DESTINO = './Static/img'
 
 #Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
-RUTA_DESTINO = '/home/Marianela/mysite/Static/img'
+RUTA_DESTINO = '/home/Marianela/mysite/Static/img/' #aca modifique
 
 
 #--------------------------------------------------------------------
