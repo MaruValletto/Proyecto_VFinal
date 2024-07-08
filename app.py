@@ -257,9 +257,9 @@ def eliminar_usuario(id):
 #--------------------------------------------------------------------
 
 # Ruta raíz para mensaje de bienvenida o redirección
-@app.route("/")
-def index():
-    return "¡Bienvenido a la aplicación de gestión de usuarios!"
+#@app.route("/")
+#def index():
+    #return "¡Bienvenido a la aplicación de gestión de usuarios!"
 
 
 if __name__ == "__main__":
