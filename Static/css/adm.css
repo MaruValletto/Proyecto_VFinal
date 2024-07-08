@@ -337,16 +337,25 @@ button:hover {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
+  /*background-color: rgb(0,0,0);*/
+  background-color: rgba(0,0,0,0.6);
 }
 
 .modal-content {
   background-color: #e0dede;
-  margin: 8% auto;
+  margin: 10% auto; /* Margen superior e inferior y centrado horizontal */
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 0 20px rgba(0,0,0,0.3); /* Sombra */
+  max-width: 900px; /* Ancho máximo */
+  padding-bottom: 40px; /* Espacio adicional en la parte inferior */
+  /* width: 80%; */
+}
+
+.modal h2 {
+  text-align: center; /* Alinear el título al centro */
+  margin-bottom: 15px;
+  color: #9B63BF;
 }
 
 .close {
