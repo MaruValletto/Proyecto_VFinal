@@ -29,19 +29,22 @@
 }
 
 .navbar .title-container {
-    display: flex;
-    justify-content: center;
-    flex: 1; /* Ajusta la proporción según sea necesario */
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center;
+  flex: 1; /* Ajusta la proporción según sea necesario */
 }
 
 .navbar .title-container h2 {
-    margin: 0; /* Elimina el margen por defecto */
-    text-align: center; /* Asegura que el texto esté centrado */
-    align-items: center;
-    font-size: 1.4em;
-    color: #9B63BF;
+  margin: 0; /* Elimina el margen por defecto */
+  text-align: center; /* Asegura que el texto esté centrado */
+  font-size: 1.4em;
+  color: #9B63BF;
 }
 
+.button-container{
+  margin-left: auto;
+}
 
 /*Animación del Logo*/
 .logo:hover{
@@ -136,6 +139,8 @@
   align-content: flex-start;
   flex-wrap: wrap;
   overflow: auto;
+  color: white;
+  font-size: 1.3em;
 }
 
 /*formulario altas*/
@@ -330,5 +335,20 @@ button:hover {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.agregar-btn {
+  background-color: #f25116;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 90%;
+  font-weight: 700;
+  border-radius:5px;
+}
+
+.agregar-btn:hover {
+  background-color: #9B63BF;
 }
 
